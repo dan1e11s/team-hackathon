@@ -1,4 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "username": "ggg",
+      "age": "22",
+      "password": "vv",
+      "isAdmin": false,
+      "id": 1
+    }
+  ],
   "products": []
 }
