@@ -1,5 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { Typography } from '@mui/material';
 import { useProducts } from '../../../contexts/ProductContextProvider';
 
 const ProductCard = () => {
@@ -8,15 +14,39 @@ const ProductCard = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <Box
+      sx={{
+        height: '90vh',
+        display: 'flex',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+      }}
+    >
       {products.map((item) => (
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-          <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
-          <button onClick={() => deleteProduct(item.id)}>Delete</button>
-        </div>
+        <Card sx={{ maxWidth: '20%' }}>
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            height="140"
+            image="/static/images/cards/contemplative-reptile.jpg"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+            <button onClick={() => deleteProduct(item.id)}>Delete</button>
+          </CardActions>
+        </Card>
       ))}
-    </div>
+    </Box>
   );
 };
 
