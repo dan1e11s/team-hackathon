@@ -5,8 +5,6 @@ import ProductPage from './pages/ProductPage/ProductPage';
 import ProductContextProvider from './contexts/ProductContextProvider';
 import AdminPage from './pages/AdminPage/AdminPage';
 import EditPage from './pages/EditPage/EditPage';
-import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
 
 const MainRoutes = () => {
   return (
@@ -17,8 +15,10 @@ const MainRoutes = () => {
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/edit/:id" element={<EditPage />} />
         <Route path="/register" element={<RegistrationPage />} />
-      <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </ProductContextProvider>
-    )}
+  );
+};
+
 export default MainRoutes;

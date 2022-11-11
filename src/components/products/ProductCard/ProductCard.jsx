@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -7,46 +7,65 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Typography } from '@mui/material';
 import { useProducts } from '../../../contexts/ProductContextProvider';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import Tooltip from '@mui/material/Tooltip';
 
-const ProductCard = () => {
-  const { products, deleteProduct } = useProducts();
+const ProductCard = ({ item }) => {
+  const { deleteProduct } = useProducts();
+  const [like, setLike] = useState(false);
 
   const navigate = useNavigate();
 
   return (
-    <Box
+    <Card
       sx={{
-        height: '90vh',
-        display: 'flex',
-        justifyContent: 'space-around',
-        flexWrap: 'wrap',
-        alignItems: 'center',
+        maxWidth: '350px',
+        margin: '0 25px 0 0',
+        padding: '20px',
+        backgroundColor: '#101011',
+        color: '#999999',
       }}
     >
-      {products.map((item) => (
-        <Card sx={{ maxWidth: '20%' }}>
-          <CardMedia
-            component="img"
-            alt="green iguana"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
-            <button onClick={() => deleteProduct(item.id)}>Delete</button>
-          </CardActions>
-        </Card>
-      ))}
-    </Box>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        height="140"
+        image={item.image}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {item.title}
+        </Typography>
+        <Typography variant="body2" color="#999999">
+          Price: {item.price}$
+        </Typography>
+      </CardContent>
+      <CardActions sx={{ displa: 'flex', justifyContent: 'space-between' }}>
+        <Tooltip title="Details">
+          <IconButton>
+            <ReadMoreIcon sx={{ color: '#999999' }} />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Add to favorites">
+          <IconButton>
+            <BookmarkAddIcon sx={{ color: '#999999' }} />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Like">
+          <IconButton>
+            <FavoriteIcon
+              onClick={() => setLike(!like)}
+              sx={{ color: `${like ? 'red' : '#999999'}` }}
+            />
+          </IconButton>
+        </Tooltip>
+        {/* <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
+        <button onClick={() => deleteProduct(item.id)}>Delete</button> */}
+      </CardActions>
+    </Card>
   );
 };
 
