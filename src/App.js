@@ -1,10 +1,13 @@
-import React from 'react';
-import MainRoutes from './MainRoutes';
+import React from "react";
+import MainRoutes from "./MainRoutes";
+import AuthContextProvider from "./contexts/AuthContextProvider";
 
 const App = () => {
   return (
     <>
-      <MainRoutes />
+      <AuthContextProvider>
+        <MainRoutes />
+      </AuthContextProvider>
     </>
   );
 };
