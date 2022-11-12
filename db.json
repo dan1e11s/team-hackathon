@@ -8,17 +8,18 @@
       "id": 1
     },
     {
-      "username": "gg",
-      "age": "55",
-      "password": "hh",
-      "isAdmin": false,
-    },
-    {
       "username": "dani",
       "age": "19",
       "password": "qwe",
       "isAdmin": true,
       "id": 2
+    },
+    {
+      "username": "dan1e11s",
+      "age": "19",
+      "password": "123",
+      "isAdmin": true,
+      "id": 3
     }
   ],
   "products": [
@@ -77,7 +78,7 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
       },
-      "height": 2.0,
+      "height": 2,
       "weight": 18.7,
       "abilities": "Blaze",
       "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
@@ -167,7 +168,7 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
       },
-      "height": 1.0,
+      "height": 1,
       "weight": 7.7,
       "abilities": "Guts",
       "abilities-desc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
@@ -213,7 +214,7 @@
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
       },
       "height": 3.03,
-      "weight": 65.0,
+      "weight": 65,
       "abilities": "Sand Veil",
       "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
     },
@@ -227,8 +228,8 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
       },
-      "height": 2.0,
-      "weight": 22.0,
+      "height": 2,
+      "weight": 22,
       "abilities": "Shed Skin",
       "abilities-desc": "The Pokémon may heal its own status conditions by shedding its skin."
     },
@@ -242,7 +243,7 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
       },
-      "height": 2.0,
+      "height": 2,
       "weight": 26.5,
       "abilities": "Sand Veil",
       "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
@@ -257,8 +258,8 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
       },
-      "height": 1.0,
-      "weight": 4.0,
+      "height": 1,
+      "weight": 4,
       "abilities": "Tangled Feet",
       "abilities-desc": "Raises evasiveness if the Pokémon is confused."
     },
@@ -287,7 +288,7 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
         "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
       },
-      "height": 1.0,
+      "height": 1,
       "weight": 4.4,
       "abilities": "Keen Eye",
       "abilities-desc": "Keen eyes prevent other Pokémon from lowering this Pokémon’s accuracy."
