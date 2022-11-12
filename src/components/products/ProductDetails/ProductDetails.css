@@ -1,0 +1,9 @@
+.help-icon {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.help-icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

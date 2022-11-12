@@ -9,11 +9,13 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+import { IconButton } from '@mui/material';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import '../ProductSideBar/ProductSideBar.css';
 import { grey } from '@mui/material/colors';
 import FilterProduct from '../FilterProduct/FilterProduct';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const drawerWidth = '15%';
 
@@ -84,12 +86,16 @@ export default function ProductSideBar() {
       variant="permanent"
       open={open}
     >
-      <DrawerHeader></DrawerHeader>
+      <DrawerHeader>
+        <IconButton>
+          <CatchingPokemonIcon sx={{ color: 'white' }} />
+        </IconButton>
+      </DrawerHeader>
       <List>
         <ListItem disablePadding sx={{ display: 'block' }}>
           <ListItemButton
             className="list-item-btn"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/product')}
             sx={{
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
@@ -115,6 +121,7 @@ export default function ProductSideBar() {
               justifyContent: open ? 'initial' : 'center',
               px: 2.5,
             }}
+            onClick={() => navigate('/admin')}
           >
             <ListItemIcon
               sx={{
@@ -124,9 +131,9 @@ export default function ProductSideBar() {
                 justifyContent: 'center',
               }}
             >
-              <NewspaperIcon />
+              <AdminPanelSettingsIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>News</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Admin</ListItemText>
           </ListItemButton>
           <FilterProduct open={open} />
           <ListItemButton
@@ -192,7 +199,7 @@ export default function ProductSideBar() {
                 justifyContent: 'center',
               }}
             >
-              <NewspaperIcon />
+              <AdminPanelSettingsIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
           </ListItemButton>

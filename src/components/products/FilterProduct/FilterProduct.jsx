@@ -3,12 +3,7 @@ import Collapse from '@mui/material/Collapse';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-} from '@mui/material';
+import { Box, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import CategoryIcon from '@mui/icons-material/Category';
@@ -20,7 +15,7 @@ const FilterProduct = ({ open }) => {
   const color = { color: '#999999' };
 
   return (
-    <ListItem disablePadding sx={{ display: 'block' }}>
+    <Box sx={{ display: 'block' }}>
       <ListItemButton
         sx={{ px: 2.5 }}
         onClick={() => setCategory(!category)}
@@ -31,7 +26,7 @@ const FilterProduct = ({ open }) => {
             color,
           }}
         >
-          <CategoryIcon category={category} setCategory={setCategory} />
+          <CategoryIcon />
         </ListItemIcon>
         <ListItemText sx={{ opacity: open ? 1 : 0 }}>Category</ListItemText>
         {category ? <ExpandLess /> : <ExpandMore />}
@@ -87,7 +82,7 @@ const FilterProduct = ({ open }) => {
           />
         </RadioGroup>
       </Collapse>
-    </ListItem>
+    </Box>
   );
 };
 

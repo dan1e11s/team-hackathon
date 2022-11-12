@@ -20,181 +20,301 @@
       "id": 1,
       "title": "Bulbasaur",
       "price": 109.95,
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "description": "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
       "category": "seed",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-      "rating": 3.9
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+      },
+      "height": 2.04,
+      "weight": 15.2,
+      "abilities": "Overgrow",
+      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 2,
       "title": "Ivysaur",
       "price": 55.99,
-      "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+      "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
       "category": "seed",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
-      "rating": 4.7
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+      },
+      "height": 3.03,
+      "weight": 28.7,
+      "abilities": "Overgrow",
+      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 3,
       "title": "Venusaur",
       "price": 15.99,
-      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "description": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
       "category": "seed",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
-      "rating": 2.1
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+      },
+      "height": 6.07,
+      "weight": 220.5,
+      "abilities": "Overgrow",
+      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 4,
       "title": "Сharmander",
       "price": 69.55,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
       "category": "flame",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+      },
+      "height": 2.0,
+      "weight": 18.7,
+      "abilities": "Blaze",
+      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 5,
       "title": "Charmeleon",
       "price": 65.51,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.",
       "category": "flame",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+      },
+      "height": 3.07,
+      "weight": 41.9,
+      "abilities": "Blaze",
+      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 6,
       "title": "Charizard",
       "price": 72.99,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
       "category": "flame",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+      },
+      "height": 5.07,
+      "weight": 199.5,
+      "abilities": "Blaze",
+      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 7,
       "title": "Squirtle",
       "price": 23.99,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
       "category": "turtle",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+      },
+      "height": 1.08,
+      "weight": 19.8,
+      "abilities": "Torrent",
+      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 8,
       "title": "Wartortle",
       "price": 78.12,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.",
       "category": "turtle",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+      },
+      "height": 3.03,
+      "weight": 49.6,
+      "abilities": "Torrent",
+      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 9,
       "title": "Blastoise",
       "price": 90.89,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
       "category": "turtle",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+      },
+      "height": 5.03,
+      "weight": 188.5,
+      "abilities": "Torrent",
+      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 10,
       "title": "Rattata",
       "price": 17.85,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+      },
+      "height": 1.0,
+      "weight": 7.7,
+      "abilities": "Guts",
+      "abilities-desc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
     },
     {
       "id": 11,
       "title": "Metapod",
       "price": 55.55,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
       "category": "cocoon",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+      },
+      "height": 2.04,
+      "weight": 21.8,
+      "abilities": "Shed Skin",
+      "abilities-desc": "The Pokémon may heal its own status conditions by shedding its skin."
     },
     {
       "id": 12,
       "title": "Pidgeotto",
       "price": 95.13,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.",
       "category": "bird",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+      },
+      "height": 3.07,
+      "weight": 66.1,
+      "abilities": "Tangled Feet",
+      "abilities-desc": "Raises evasiveness if the Pokémon is confused."
     },
     {
       "id": 13,
       "title": "Sandslash",
       "price": 99.99,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "The drier the area Sandslash lives in, the harder and smoother the Pokémon’s spikes will feel when touched.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
+      },
+      "height": 3.03,
+      "weight": 65.0,
+      "abilities": "Sand Veil",
+      "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
     },
     {
       "id": 14,
       "title": "Kakuna",
       "price": 68.98,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
       "category": "cocoon",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
+      },
+      "height": 2.0,
+      "weight": 22.0,
+      "abilities": "Shed Skin",
+      "abilities-desc": "The Pokémon may heal its own status conditions by shedding its skin."
     },
     {
       "id": 15,
       "title": "Sandshrew",
       "price": 34.56,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "It loves to bathe in the grit of dry, sandy areas. By sand bathing, the Pokémon rids itself of dirt and moisture clinging to its body.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+      },
+      "height": 2.0,
+      "weight": 26.5,
+      "abilities": "Sand Veil",
+      "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
     },
     {
       "id": 16,
       "title": "Pidgey",
       "price": 90.75,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.",
       "category": "bird",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+      },
+      "height": 1.0,
+      "weight": 4.0,
+      "abilities": "Tangled Feet",
+      "abilities-desc": "Raises evasiveness if the Pokémon is confused."
     },
     {
       "id": 17,
       "title": "Raticate",
       "price": 12.57,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+      },
+      "height": 2.04,
+      "weight": 40.8,
+      "abilities": "Guts",
+      "abilities-desc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
     },
     {
       "id": 18,
       "title": "Spearow",
       "price": 35.54,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Inept at flying high. However, it can fly around very fast to protect its territory.",
       "category": "bird",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+      },
+      "height": 1.0,
+      "weight": 4.4,
+      "abilities": "Keen Eye",
+      "abilities-desc": "Keen eyes prevent other Pokémon from lowering this Pokémon’s accuracy."
     },
     {
       "id": 19,
       "title": "Pikachu",
       "price": 220.99,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+      },
+      "height": 1.04,
+      "weight": 13.2,
+      "abilities": "Static",
+      "abilities-desc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
     },
     {
       "id": 20,
       "title": "Raichu",
       "price": 250.99,
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "description": "Its long tail serves as a ground to protect itself from its own high-voltage power.",
       "category": "mouse",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
-      "rating": 4.6
+      "image": {
+        "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+        "main": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png"
+      },
+      "height": 2.07,
+      "weight": 66.1,
+      "abilities": "Static",
+      "abilities-desc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
     }
   ]
 }
