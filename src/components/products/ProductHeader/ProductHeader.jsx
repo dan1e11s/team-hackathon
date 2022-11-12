@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useProducts } from '../../../contexts/ProductContextProvider';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -50,24 +52,29 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function ProductHeader() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+export default function ProductHeader({ setPage }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get('q') || '');
+
+  const { getProducts } = useProducts();
+
+  useEffect(() => {
+    setSearchParams({
+      q: query,
+    });
+  }, [query]);
+
+  useEffect(() => {
+    getProducts();
+    setPage(1);
+  }, [searchParams]);
+
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
   const handleMobileMenuOpen = (event) => {
@@ -91,7 +98,7 @@ export default function ProductHeader() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem>
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -142,6 +149,8 @@ export default function ProductHeader() {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
               />

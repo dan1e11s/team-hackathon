@@ -5,6 +5,8 @@ import ProductPage from './pages/ProductPage/ProductPage';
 import ProductContextProvider from './contexts/ProductContextProvider';
 import AdminPage from './pages/AdminPage/AdminPage';
 import EditPage from './pages/EditPage/EditPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 
 const MainRoutes = () => {
   return (
