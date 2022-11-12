@@ -1,13 +1,13 @@
 .loginpage {
   height: 100vh;
   color: white;
-  background: url("https://images2.alphacoders.com/119/119492.jpg");
+  background: url('https://images2.alphacoders.com/119/119492.jpg');
   background-size: 1600px 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-form {
+.login-form {
   height: 300px;
   display: flex;
   flex-direction: column;

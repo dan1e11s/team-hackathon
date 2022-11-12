@@ -31,7 +31,6 @@ const openedMixin = (theme) => ({
 });
 
 const closedMixin = (theme) => ({
-  color: '#999999',
   backgroundColor: '#101011',
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
@@ -80,7 +79,6 @@ export default function ProductSideBar() {
 
   return (
     <Drawer
-      className="sed"
       onMouseOver={() => setOpen(true)}
       onMouseOut={() => setOpen(false)}
       variant="permanent"

@@ -1,16 +1,16 @@
-a {
+.homepage-list-item {
   color: #7e869a;
   margin-left: 20px;
   font-size: 15px;
   text-decoration: none;
   font-weight: 700;
-}
-a:hover {
-  font-size: 16px;
   transition: 0.9s;
-  color: white;
 }
-ul {
+.homepage-list-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.homepage-list {
   display: flex;
   list-style: none;
 }
@@ -21,7 +21,7 @@ ul {
   justify-content: space-around;
   align-items: center;
 }
-Button {
+.homepage-btn {
   height: 35px;
 }
 .stack {
@@ -45,6 +45,6 @@ Button {
 h2 {
   color: #4595d0;
 }
-p {
+.homepage-p {
   color: #7e869a;
 }
