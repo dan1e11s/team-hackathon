@@ -14,7 +14,6 @@ const ProductList = ({ page, setPage }) => {
 
   const productsOnPage = 4;
   const count = Math.ceil(products.length / productsOnPage);
-  console.log(products);
 
   const handlePage = (e, p) => {
     setPage(p);
@@ -30,7 +29,7 @@ const ProductList = ({ page, setPage }) => {
     <Box className="list-box">
       <Box
         sx={{
-          width: '65%',
+          width: '75%',
           height: '85vh',
           margin: '0 auto',
           marginTop: '30px',

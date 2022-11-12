@@ -7,6 +7,7 @@ import AdminPage from './pages/AdminPage/AdminPage';
 import EditPage from './pages/EditPage/EditPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
+import DetailsPage from './pages/DetailsPage/DetailsPage';
 
 const MainRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
         <Route path="/edit/:id" element={<EditPage />} />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/product/details/:id" element={<DetailsPage />} />
       </Routes>
     </ProductContextProvider>
   );
