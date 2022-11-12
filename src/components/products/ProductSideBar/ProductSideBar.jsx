@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Diversity2Icon from '@mui/icons-material/Diversity2';
 import HomeIcon from '@mui/icons-material/Home';
-import CategoryIcon from '@mui/icons-material/Category';
-import CommentIcon from '@mui/icons-material/Comment';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import '../ProductSideBar/ProductSideBar.css';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import Collapse from '@mui/material/Collapse';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import { grey } from '@mui/material/colors';
+import FilterProduct from '../FilterProduct/FilterProduct';
 
-const drawerWidth = 200;
+const drawerWidth = '15%';
 
 const openedMixin = (theme) => ({
   color: '#999999',
@@ -52,6 +45,7 @@ const closedMixin = (theme) => ({
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'center',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
 }));
@@ -59,9 +53,10 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
-  position: 'absolute',
   width: drawerWidth,
   flexShrink: 0,
+  position: 'absolute',
+  zIndex: '2',
   whiteSpace: 'nowrap',
   boxSizing: 'border-box',
   ...(open && {
@@ -78,26 +73,23 @@ const color = { color: '#999999' };
 
 export default function ProductSideBar() {
   const [open, setOpen] = useState(false);
-  const [category, setCategory] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <Drawer
+      className="sed"
       onMouseOver={() => setOpen(true)}
-      onMouseOut={() => {
-        setOpen(false);
-      }}
+      onMouseOut={() => setOpen(false)}
       variant="permanent"
       open={open}
     >
-      <DrawerHeader>
-        <IconButton>
-          <Diversity2Icon sx={{ color: '#fff' }} />
-        </IconButton>
-      </DrawerHeader>
+      <DrawerHeader></DrawerHeader>
       <List>
         <ListItem disablePadding sx={{ display: 'block' }}>
           <ListItemButton
             className="list-item-btn"
+            onClick={() => navigate('/')}
             sx={{
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
@@ -117,48 +109,6 @@ export default function ProductSideBar() {
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Home</ListItemText>
           </ListItemButton>
           <ListItemButton
-            sx={{ px: 2.5 }}
-            onClick={() => setCategory(!category)}
-            className="list-item-btn"
-          >
-            <ListItemIcon
-              sx={{
-                color,
-              }}
-            >
-              <CategoryIcon />
-            </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Category</ListItemText>
-            {category ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse
-            in={category}
-            timeout="auto"
-            onChange={() => setCategory(false)}
-          >
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              name="radio-buttons-group"
-              sx={{ pl: 5 }}
-            >
-              <FormControlLabel
-                value="item 1"
-                control={<Radio sx={color} />}
-                label="Item 1"
-              />
-              <FormControlLabel
-                value="item 2"
-                control={<Radio sx={color} />}
-                label="Item 2"
-              />
-              <FormControlLabel
-                value="item 3"
-                control={<Radio sx={color} />}
-                label="Item 3"
-              />
-            </RadioGroup>
-          </Collapse>
-          <ListItemButton
             className="list-item-btn"
             sx={{
               minHeight: 48,
@@ -174,10 +124,11 @@ export default function ProductSideBar() {
                 justifyContent: 'center',
               }}
             >
-              <CommentIcon />
+              <NewspaperIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>News</ListItemText>
           </ListItemButton>
+          <FilterProduct open={open} />
           <ListItemButton
             className="list-item-btn"
             sx={{
@@ -196,7 +147,9 @@ export default function ProductSideBar() {
             >
               <BookmarkIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Bookmark</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>
+              Favorites
+            </ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
@@ -239,7 +192,7 @@ export default function ProductSideBar() {
                 justifyContent: 'center',
               }}
             >
-              <CommentIcon />
+              <NewspaperIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
           </ListItemButton>
