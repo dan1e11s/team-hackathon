@@ -46,7 +46,7 @@
     {
       "id": 4,
       "title": "Сharmander",
-      "price": 695,
+      "price": 69.55,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "flame",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
@@ -55,7 +55,7 @@
     {
       "id": 5,
       "title": "Charmeleon",
-      "price": 695,
+      "price": 65.51,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "flame",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
@@ -64,7 +64,7 @@
     {
       "id": 6,
       "title": "Charizard",
-      "price": 695,
+      "price": 72.99,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "flame",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
@@ -73,7 +73,7 @@
     {
       "id": 7,
       "title": "Squirtle",
-      "price": 695,
+      "price": 23.99,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "turtle",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
@@ -82,7 +82,7 @@
     {
       "id": 8,
       "title": "Wartortle",
-      "price": 695,
+      "price": 78.12,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "turtle",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
@@ -91,7 +91,7 @@
     {
       "id": 9,
       "title": "Blastoise",
-      "price": 695,
+      "price": 90.89,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "turtle",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
@@ -100,7 +100,7 @@
     {
       "id": 10,
       "title": "Rattata",
-      "price": 695,
+      "price": 17.85,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
@@ -109,7 +109,7 @@
     {
       "id": 11,
       "title": "Metapod",
-      "price": 695,
+      "price": 55.55,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "cocoon",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
@@ -118,7 +118,7 @@
     {
       "id": 12,
       "title": "Pidgeotto",
-      "price": 695,
+      "price": 95.13,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "bird",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
@@ -127,7 +127,7 @@
     {
       "id": 13,
       "title": "Sandslash",
-      "price": 695,
+      "price": 99.99,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
@@ -136,7 +136,7 @@
     {
       "id": 14,
       "title": "Kakuna",
-      "price": 695,
+      "price": 68.98,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "cocoon",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
@@ -145,7 +145,7 @@
     {
       "id": 15,
       "title": "Sandshrew",
-      "price": 695,
+      "price": 34.56,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
@@ -154,7 +154,7 @@
     {
       "id": 16,
       "title": "Pidgey",
-      "price": 695,
+      "price": 90.75,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "bird",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
@@ -163,7 +163,7 @@
     {
       "id": 17,
       "title": "Raticate",
-      "price": 695,
+      "price": 12.57,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
@@ -172,7 +172,7 @@
     {
       "id": 18,
       "title": "Spearow",
-      "price": 695,
+      "price": 35.54,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "bird",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
@@ -181,7 +181,7 @@
     {
       "id": 19,
       "title": "Pikachu",
-      "price": 695,
+      "price": 220.99,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
@@ -190,7 +190,7 @@
     {
       "id": 20,
       "title": "Raichu",
-      "price": 695,
+      "price": 250.99,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "mouse",
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",

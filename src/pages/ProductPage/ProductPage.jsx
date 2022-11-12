@@ -17,7 +17,7 @@ const ProductPage = () => {
           position: 'relative',
         }}
       >
-        <ProductHeader />
+        <ProductHeader setPage={setPage} />
         <ProductList page={page} setPage={setPage} />
       </div>
     </>
