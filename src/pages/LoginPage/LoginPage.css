@@ -1,0 +1,39 @@
+.loginpage {
+  height: 100vh;
+  color: white;
+  background: url("https://images2.alphacoders.com/119/119492.jpg");
+  background-size: 1600px 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  color: #beb9b9;
+  padding: 8px 12px;
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  width: 200px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  text-indent: 0px;
+}
+.input:hover {
+  border: 1px solid #4595d0;
+}
+h2 {
+  margin-top: 0;
+}
+.button {
+  background-color: #4595d0;
+  color: white;
+  border: 1px solid #4595d0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}

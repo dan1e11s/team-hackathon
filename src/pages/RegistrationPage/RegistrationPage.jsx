@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { useState } from "react";
+import "../RegistrationPage/RegistrationPage.css";
 
 const RegistrationPage = () => {
   const [username, setUsername] = useState("");
@@ -12,41 +13,48 @@ const RegistrationPage = () => {
   const { usernameCheck } = useAuth();
 
   return (
-    <>
+    <div className="registerpage">
       <form>
         <h2>Register User</h2>
         <input
+          className="input"
           type="text"
           placeholder="Username"
           value={username}
           onChange={e => setUsername(e.target.value)}
         />
         <input
+          className="input"
           type="number"
           placeholder="Age"
           value={age}
           onChange={e => setAge(e.target.value)}
         />
         <input
+          className="input"
           type="text"
           placeholder="Password"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
         <input
+          className="input"
           type="text"
           placeholder="Check password"
           value={checkPassword}
           onChange={e => setCheckPassword(e.target.value)}
         />
-        <input
-          type="checkbox"
-          value={isAdmin}
-          onChange={e => setIsAdmin(!isAdmin)}
-        />
-        <label>Admin</label>
-
+        <div>
+          <label>Admin</label>
+          <input
+            className="checkbox"
+            type="checkbox"
+            value={isAdmin}
+            onChange={e => setIsAdmin(!isAdmin)}
+          />
+        </div>
         <button
+          className="button"
           onClick={e => {
             e.preventDefault();
             usernameCheck(username, age, password, checkPassword, isAdmin);
@@ -54,7 +62,7 @@ const RegistrationPage = () => {
           Register
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

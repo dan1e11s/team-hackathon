@@ -8,6 +8,12 @@
       "id": 1
     },
     {
+      "username": "gg",
+      "age": "55",
+      "password": "hh",
+      "isAdmin": false,
+    },
+    {
       "username": "dani",
       "age": "19",
       "password": "qwe",
