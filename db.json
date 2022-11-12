@@ -6,6 +6,13 @@
       "password": "vv",
       "isAdmin": false,
       "id": 1
+    },
+    {
+      "username": "gg",
+      "age": "55",
+      "password": "hh",
+      "isAdmin": false,
+      "id": 2
     }
   ],
   "products": [
