@@ -1,18 +1,22 @@
-.registerpage {
+.mainregister {
   height: 100vh;
   color: white;
-  background: url('http://cdn.wallpaperhi.com/1920x1200/20140817/pokemon%20bulbasaur%20simple%20background%20black%20background_www.wallpaperhi.com_42.jpg');
+  background: url("http://cdn.wallpaperhi.com/1920x1200/20140817/pokemon%20bulbasaur%20simple%20background%20black%20background_www.wallpaperhi.com_42.jpg");
   background-size: 1600px 100vh;
+}
+.registerpage {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.register-form {
-  margin-bottom: 150px;
 }
 .checkbox {
   width: 30px;
 }
 .register-label {
   color: #beb9b9;
+}
+.register-form {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
 }
