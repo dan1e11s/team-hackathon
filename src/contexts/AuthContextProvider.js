@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const authContext = React.createContext();
 export const useAuth = () => useContext(authContext);
 
-const USERS_API = 'http://localhost:8000/users';
+const USERS_API = "http://localhost:8000/users";
 
 const AuthContextProvider = ({ children }) => {
   const navigate = useNavigate();
@@ -14,45 +14,45 @@ const AuthContextProvider = ({ children }) => {
     checkLoginStatus();
     const { data } = await axios.get(USERS_API);
     const checkLogin = data.find(
-      (item) => item.username === username && item.password === password
+      item => item.username === username && item.password === password
     );
     if (checkLogin) {
-      localStorage.setItem('user', username);
-      alert('Вы вошли в аккаунт');
-      navigate('/');
+      localStorage.setItem("user", username);
+      alert("Вы вошли в аккаунт");
+      navigate("/");
     } else {
-      alert('У вас ошибка в имени пользователя или пароле');
+      alert("У вас ошибка в имени пользователя или пароле");
     }
   };
 
   function checkLoginStatus() {
-    let user = localStorage.getItem('user');
+    let user = localStorage.getItem("user");
     if (user) {
-      alert('Вы уже вошли в аккаунт');
+      alert("Вы уже вошли в аккаунт");
     }
   }
 
   function checkLogoutStatus() {
-    let user = localStorage.getItem('user');
+    let user = localStorage.getItem("user");
     if (!user) {
-      alert('Сперва войдите в аккаунт');
+      alert("Сперва войдите в аккаунт");
     }
   }
 
   function logout() {
-    localStorage.removeItem('user');
+    localStorage.removeItem("user");
   }
 
-  const addUser = async (newUser) => {
+  const addUser = async newUser => {
     axios.post(USERS_API, newUser);
   };
 
   function register(username, age, password, checkPassword, isAdmin) {
     if (!username || !age || !password || !checkPassword) {
-      alert('Some inputs are empty');
+      alert("Some inputs are empty");
       return;
     } else {
-      alert('Вы успешно зарегистрировались');
+      alert("Вы успешно зарегистрировались");
       let newUser = {
         username,
         age,
@@ -60,13 +60,13 @@ const AuthContextProvider = ({ children }) => {
         isAdmin: isAdmin,
       };
       addUser(newUser);
-      navigate('/login');
+      navigate("/login");
     }
   }
 
   function passCheck(password, checkPassword, username, age, isAdmin) {
     if (password !== checkPassword) {
-      alert('Passwords do not match');
+      alert("Passwords do not match");
       return;
     } else {
       register(username, age, password, checkPassword, isAdmin);
@@ -81,9 +81,9 @@ const AuthContextProvider = ({ children }) => {
     isAdmin
   ) => {
     const { data } = await axios.get(USERS_API);
-    const checkUsername = data.find((item) => item.username === username);
+    const checkUsername = data.find(item => item.username === username);
     if (checkUsername) {
-      alert('Такое имя пользователя уже занято');
+      alert("Такое имя пользователя уже занято");
       return;
     } else {
       passCheck(password, checkPassword, username, age, isAdmin);
@@ -97,8 +97,7 @@ const AuthContextProvider = ({ children }) => {
         login,
         usernameCheck,
         logout,
-      }}
-    >
+      }}>
       {children}
     </authContext.Provider>
   );
