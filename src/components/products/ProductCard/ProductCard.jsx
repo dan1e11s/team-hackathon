@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Typography } from "@mui/material";
-// import { useProducts } from '../../../contexts/ProductContextProvider';
-import IconButton from "@mui/material/IconButton";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
-import ReadMoreIcon from "@mui/icons-material/ReadMore";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import Tooltip from "@mui/material/Tooltip";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { Typography } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Tooltip from '@mui/material/Tooltip';
 
 const ProductCard = ({ item }) => {
-  // const { deleteProduct } = useProducts();
   const [like, setLike] = useState(false);
 
   const navigate = useNavigate();

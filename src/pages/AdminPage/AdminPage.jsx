@@ -1,8 +1,12 @@
 import React from 'react';
-import AddProduct from '../../components/products/AddProduct/AddProduct';
+import AdminProductList from '../../components/adminPanel/AdminProductList/AdminProductList';
 
 const AdminPage = () => {
-  return <AddProduct />;
+  return (
+    <>
+      <AdminProductList />
+    </>
+  );
 };
 
 export default AdminPage;

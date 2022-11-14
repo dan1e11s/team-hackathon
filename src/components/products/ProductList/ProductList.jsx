@@ -30,7 +30,7 @@ const ProductList = ({ page, setPage }) => {
       <Box
         sx={{
           width: '75%',
-          height: '85vh',
+          minHeight: '85vh',
           margin: '0 auto',
           marginTop: '30px',
           display: 'flex',
