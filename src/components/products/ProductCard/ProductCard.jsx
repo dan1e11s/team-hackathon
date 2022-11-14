@@ -11,21 +11,25 @@ import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Tooltip from '@mui/material/Tooltip';
+import { useCart } from '../../../contexts/CartContextProvider';
 
 const ProductCard = ({ item }) => {
   const [like, setLike] = useState(false);
+  const { addProductToCart, checkProductInCart } = useCart();
 
   const navigate = useNavigate();
+  console.log(item);
 
   return (
     <Card
       sx={{
-        maxWidth: "350px",
-        margin: "0 25px 0 0",
-        padding: "20px",
-        backgroundColor: "#101011",
-        color: "#999999",
-      }}>
+        maxWidth: '350px',
+        margin: '0 25px 0 0',
+        padding: '20px',
+        backgroundColor: '#101011',
+        color: '#999999',
+      }}
+    >
       <CardMedia
         component="img"
         alt="green iguana"
@@ -40,29 +44,31 @@ const ProductCard = ({ item }) => {
           Price: {item.price}$
         </Typography>
       </CardContent>
-      <CardActions sx={{ displa: "flex", justifyContent: "space-between" }}>
+      <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Tooltip title="Details">
           <IconButton onClick={() => navigate(`details/${item.id}`)}>
-            <ReadMoreIcon sx={{ color: "#999999" }} />
+            <ReadMoreIcon sx={{ color: '#999999' }} />
           </IconButton>
         </Tooltip>
         <Tooltip title="Add to cart">
-          <IconButton>
-            <AddShoppingCartIcon sx={{ color: "#999999" }} />
+          <IconButton onClick={() => addProductToCart(item)}>
+            <AddShoppingCartIcon
+              sx={{
+                color: `${checkProductInCart(item.id) ? '#388E3C' : '#999999'}`,
+              }}
+            />
           </IconButton>
         </Tooltip>
         <Tooltip title="Add to favorites">
           <IconButton>
-            <BookmarkAddIcon sx={{ color: "#999999" }} />
+            <BookmarkAddIcon sx={{ color: '#999999' }} />
           </IconButton>
         </Tooltip>
         <Tooltip title="Like">
           <IconButton onClick={() => setLike(!like)}>
-            <FavoriteIcon sx={{ color: `${like ? "red" : "#999999"}` }} />
+            <FavoriteIcon sx={{ color: `${like ? 'red' : '#999999'}` }} />
           </IconButton>
         </Tooltip>
-        {/* <button onClick={() => navigate(`/edit/${item.id}`)}>Edit</button>
-        <button onClick={() => deleteProduct(item.id)}>Delete</button> */}
       </CardActions>
     </Card>
   );
