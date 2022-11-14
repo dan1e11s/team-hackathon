@@ -36,7 +36,7 @@
       "height": 2.04,
       "weight": 15.2,
       "abilities": "Overgrow",
-      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 2,
@@ -51,7 +51,7 @@
       "height": 3.03,
       "weight": 28.7,
       "abilities": "Overgrow",
-      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 3,
@@ -66,11 +66,11 @@
       "height": 6.07,
       "weight": 220.5,
       "abilities": "Overgrow",
-      "abilities-desc": "Powers up Grass-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Grass-type moves when the Pokémons HP is low."
     },
     {
       "id": 4,
-      "title": "Сharmander",
+      "title": "Charmander",
       "price": 69.55,
       "description": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
       "category": "flame",
@@ -81,7 +81,7 @@
       "height": 2,
       "weight": 18.7,
       "abilities": "Blaze",
-      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 5,
@@ -96,7 +96,7 @@
       "height": 3.07,
       "weight": 41.9,
       "abilities": "Blaze",
-      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 6,
@@ -111,7 +111,7 @@
       "height": 5.07,
       "weight": 199.5,
       "abilities": "Blaze",
-      "abilities-desc": "Powers up Fire-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Fire-type moves when the Pokémons HP is low."
     },
     {
       "id": 7,
@@ -126,7 +126,7 @@
       "height": 1.08,
       "weight": 19.8,
       "abilities": "Torrent",
-      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 8,
@@ -141,7 +141,7 @@
       "height": 3.03,
       "weight": 49.6,
       "abilities": "Torrent",
-      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 9,
@@ -156,7 +156,7 @@
       "height": 5.03,
       "weight": 188.5,
       "abilities": "Torrent",
-      "abilities-desc": "Powers up Water-type moves when the Pokémons HP is low."
+      "abilitiesDesc": "Powers up Water-type moves when the Pokémons HP is low."
     },
     {
       "id": 10,
@@ -171,7 +171,7 @@
       "height": 1,
       "weight": 7.7,
       "abilities": "Guts",
-      "abilities-desc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
+      "abilitiesDesc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
     },
     {
       "id": 11,
@@ -186,7 +186,7 @@
       "height": 2.04,
       "weight": 21.8,
       "abilities": "Shed Skin",
-      "abilities-desc": "The Pokémon may heal its own status conditions by shedding its skin."
+      "abilitiesDesc": "The Pokémon may heal its own status conditions by shedding its skin."
     },
     {
       "id": 12,
@@ -201,7 +201,7 @@
       "height": 3.07,
       "weight": 66.1,
       "abilities": "Tangled Feet",
-      "abilities-desc": "Raises evasiveness if the Pokémon is confused."
+      "abilitiesDesc": "Raises evasiveness if the Pokémon is confused."
     },
     {
       "id": 13,
@@ -216,7 +216,7 @@
       "height": 3.03,
       "weight": 65,
       "abilities": "Sand Veil",
-      "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
+      "abilitiesDesc": "Boosts the Pokémon’s evasiveness in a sandstorm."
     },
     {
       "id": 14,
@@ -231,7 +231,7 @@
       "height": 2,
       "weight": 22,
       "abilities": "Shed Skin",
-      "abilities-desc": "The Pokémon may heal its own status conditions by shedding its skin."
+      "abilitiesDesc": "The Pokémon may heal its own status conditions by shedding its skin."
     },
     {
       "id": 15,
@@ -246,7 +246,7 @@
       "height": 2,
       "weight": 26.5,
       "abilities": "Sand Veil",
-      "abilities-desc": "Boosts the Pokémon’s evasiveness in a sandstorm."
+      "abilitiesDesc": "Boosts the Pokémon’s evasiveness in a sandstorm."
     },
     {
       "id": 16,
@@ -261,7 +261,7 @@
       "height": 1,
       "weight": 4,
       "abilities": "Tangled Feet",
-      "abilities-desc": "Raises evasiveness if the Pokémon is confused."
+      "abilitiesDesc": "Raises evasiveness if the Pokémon is confused."
     },
     {
       "id": 17,
@@ -276,7 +276,7 @@
       "height": 2.04,
       "weight": 40.8,
       "abilities": "Guts",
-      "abilities-desc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
+      "abilitiesDesc": "Its so gutsy that having a status condition boosts the Pokémons Attack stat."
     },
     {
       "id": 18,
@@ -291,7 +291,7 @@
       "height": 1,
       "weight": 4.4,
       "abilities": "Keen Eye",
-      "abilities-desc": "Keen eyes prevent other Pokémon from lowering this Pokémon’s accuracy."
+      "abilitiesDesc": "Keen eyes prevent other Pokémon from lowering this Pokémon’s accuracy."
     },
     {
       "id": 19,
@@ -306,7 +306,7 @@
       "height": 1.04,
       "weight": 13.2,
       "abilities": "Static",
-      "abilities-desc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
+      "abilitiesDesc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
     },
     {
       "id": 20,
@@ -321,7 +321,7 @@
       "height": 2.07,
       "weight": 66.1,
       "abilities": "Static",
-      "abilities-desc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
+      "abilitiesDesc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
     }
   ]
 }

@@ -16,6 +16,7 @@ import '../ProductSideBar/ProductSideBar.css';
 import { grey } from '@mui/material/colors';
 import FilterProduct from '../FilterProduct/FilterProduct';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import CommentIcon from '@mui/icons-material/Comment';
 
 const drawerWidth = '15%';
 
@@ -112,27 +113,6 @@ export default function ProductSideBar() {
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Home</ListItemText>
           </ListItemButton>
-          <ListItemButton
-            className="list-item-btn"
-            sx={{
-              minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
-              px: 2.5,
-            }}
-            onClick={() => navigate('/admin')}
-          >
-            <ListItemIcon
-              sx={{
-                color,
-                minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
-              <AdminPanelSettingsIcon />
-            </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Admin</ListItemText>
-          </ListItemButton>
           <FilterProduct open={open} />
           <ListItemButton
             className="list-item-btn"
@@ -156,6 +136,26 @@ export default function ProductSideBar() {
               Favorites
             </ListItemText>
           </ListItemButton>
+          <ListItemButton
+            className="list-item-btn"
+            sx={{
+              minHeight: 48,
+              justifyContent: open ? 'initial' : 'center',
+              px: 2.5,
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                color,
+                minWidth: 0,
+                mr: open ? 3 : 'auto',
+                justifyContent: 'center',
+              }}
+            >
+              <CommentIcon />
+            </ListItemIcon>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
+          </ListItemButton>
         </ListItem>
       </List>
       <Divider color={grey[600]} />
@@ -168,26 +168,7 @@ export default function ProductSideBar() {
               justifyContent: open ? 'initial' : 'center',
               px: 2.5,
             }}
-          >
-            <ListItemIcon
-              sx={{
-                color,
-                minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Home</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            className="list-item-btn"
-            sx={{
-              minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
-              px: 2.5,
-            }}
+            onClick={() => navigate('/admin')}
           >
             <ListItemIcon
               sx={{
@@ -199,27 +180,9 @@ export default function ProductSideBar() {
             >
               <AdminPanelSettingsIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            className="list-item-btn"
-            sx={{
-              minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
-              px: 2.5,
-            }}
-          >
-            <ListItemIcon
-              sx={{
-                color,
-                minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
-              <BookmarkIcon />
-            </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Bookmark</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>
+              Admin Panel
+            </ListItemText>
           </ListItemButton>
         </ListItem>
       </List>

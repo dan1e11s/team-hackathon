@@ -74,7 +74,7 @@ const AddProduct = () => {
       <button
         onClick={() => {
           addProduct(product);
-          navigate('/product');
+          navigate('/admin');
         }}
       >
         ADD
