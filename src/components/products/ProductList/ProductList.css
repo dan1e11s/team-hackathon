@@ -1,15 +1,42 @@
 .list-box {
   width: 100%;
-  minheight: 100%;
-  background: url(../../../media/prodbackk.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 92.2vh;
   background-position: center center;
   background-attachment: fixed;
-  background: url('../../../media/prodbackk.png');
+  background: url("../../../media/prodbackk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
 .MuiPagination-ul .MuiButtonBase-root {
   color: white;
+}
+@media all and (max-width: 1024px) {
+  .list-box {
+    background: none;
+    background-color: black;
+    padding-left: 4%;
+  }
+}
+@media all and (max-width: 1024px) {
+  .list-box {
+    background: none;
+    background-color: black;
+    padding-left: 6%;
+  }
+}
+@media all and (max-width: 425px) {
+  .list-box {
+    background: none;
+    background-color: black;
+    padding-left: 10%;
+  }
+}
+@media all and (max-width: 320px) {
+  .list-box {
+    background: none;
+    background-color: black;
+    padding-left: 13%;
+  }
 }

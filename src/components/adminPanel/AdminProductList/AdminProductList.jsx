@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
-import Box from '@mui/material/Box';
-import { Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import { useProducts } from '../../../contexts/ProductContextProvider';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
+import React, { useEffect } from "react";
+import Box from "@mui/material/Box";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { useProducts } from "../../../contexts/ProductContextProvider";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
+import "../../adminPanel/AdminProductList/AdminProduct.css";
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[500]),
   backgroundColor: grey[500],
-  '&:hover': {
+  "&:hover": {
     backgroundColor: grey[700],
   },
 }));
@@ -30,55 +31,52 @@ const AdminProductList = () => {
   return (
     <Box
       style={{
-        minHeight: '100vh',
-        backgroundColor: '#000000',
-      }}
-    >
+        minHeight: "100vh",
+        backgroundColor: "#000000",
+      }}>
       <Box
         sx={{
           width: 400,
-          maxWidth: '100%',
-          margin: '0 auto',
-          padding: '50px 0',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+          maxWidth: "100%",
+          margin: "0 auto",
+          padding: "50px 0",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}>
         <ColorButton
-          onClick={() => navigate('/add')}
-          sx={{ width: '40%' }}
-          variant="contained"
-        >
+          className="addbtn"
+          onClick={() => navigate("/add")}
+          sx={{ width: "40%" }}
+          variant="contained">
           Add Product
         </ColorButton>
         <Button
-          onClick={() => navigate('/product')}
-          sx={{ width: '40%' }}
+          className="savebtn"
+          onClick={() => navigate("/product")}
+          sx={{ width: "40%" }}
           variant="contained"
-          color="success"
-        >
+          color="success">
           Save Changes
         </Button>
       </Box>
       <Box
         sx={{
-          padding: '0 50px',
-          display: 'flex',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
-        }}
-      >
-        {products?.map((item) => (
+          padding: "0 50px",
+          display: "flex",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+        }}>
+        {products?.map(item => (
           <Card
+            className="admincard"
             sx={{
-              width: '20%',
-              margin: '0 25px 30px 0',
-              padding: '20px',
-              backgroundColor: '#101011',
-              color: '#999999',
-            }}
-          >
+              minWidth: "20%",
+              margin: "0 25px 30px 0",
+              padding: "20px",
+              backgroundColor: "#101011",
+              color: "#999999",
+            }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -94,8 +92,7 @@ const AdminProductList = () => {
               </Typography>
             </CardContent>
             <CardActions
-              sx={{ displa: 'flex', justifyContent: 'space-between' }}
-            >
+              sx={{ displa: "flex", justifyContent: "space-between" }}>
               <ColorButton onClick={() => navigate(`/edit/${item.id}`)}>
                 Edit
               </ColorButton>

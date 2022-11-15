@@ -29,18 +29,19 @@ const ProductList = ({ page, setPage }) => {
     <Box className="list-box">
       <Box
         sx={{
-          width: '100%',
-          minHeight: '82.3vh',
-          margin: '0 auto',
-          marginTop: '30px',
-          display: 'flex',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-        }}
-      >
+          width: "100%",
+          minHeight: "82.3vh",
+          margin: "0 auto",
+          marginTop: "30px",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          alignItems: "center",
+        }}>
         {products ? (
-          currentData().map(item => <ProductCard key={item.id} item={item} />)
+          currentData().map(item => (
+            <ProductCard className="productCard" key={item.id} item={item} />
+          ))
         ) : (
           <h3>Loading...</h3>
         )}
@@ -52,7 +53,7 @@ const ProductList = ({ page, setPage }) => {
         }}>
         <Pagination
           className="pagination"
-          sx={{ position: 'static', bottom: '0' }}
+          sx={{ position: "static", bottom: "0" }}
           count={count}
           page={page}
           onChange={handlePage}

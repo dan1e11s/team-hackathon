@@ -1,0 +1,39 @@
+@media all and (max-width: 320px) {
+  .addbtn {
+    height: 45px !important;
+    width: 80px !important;
+    margin-left: 20% !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+  }
+  .savebtn {
+    height: 45px !important;
+    width: 80px !important;
+    margin-right: 20% !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+  }
+  .admincard {
+    margin: 15px auto !important;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .addbtn {
+    height: 55px !important;
+    width: 120px !important;
+    margin: 0 auto !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+  }
+  .savebtn {
+    height: 55px !important;
+    width: 120px !important;
+    margin: 0 auto !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+  }
+  .admincard {
+    margin: 15px auto !important;
+  }
+}

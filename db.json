@@ -48,6 +48,13 @@
       "password": "123",
       "isAdmin": false,
       "id": 7
+    },
+    {
+      "username": "newacc",
+      "age": "10",
+      "password": "klop",
+      "isAdmin": false,
+      "id": 8
     }
   ],
   "products": [

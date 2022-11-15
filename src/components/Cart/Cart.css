@@ -33,3 +33,14 @@
   height: 31px;
   margin-left: 20px;
 }
+@media all and (max-width: 768px) {
+  .cartt {
+    background: none;
+    background-color: black !important;
+  }
+}
+@media all and (max-width: 768px) {
+  .delete {
+    width: 50px;
+  }
+}
