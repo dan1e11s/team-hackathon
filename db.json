@@ -361,29 +361,14 @@
   ],
   "reviews": [
     {
-      "id": 1,
-      "user": "Dani",
-      "review": "Very very Good!"
-    },
-    {
-      "id": 2,
-      "user": "Abu",
-      "review": "Very very very Good!"
-    },
-    {
       "user": "mama",
-      "review": "Very Good!",
-      "id": 3
+      "review": "asdadfads",
+      "id": 1
     },
     {
-      "user": "mama",
-      "review": "Good Good ",
-      "id": 4
-    },
-    {
-      "user": "mama",
-      "review": "kjshkajshkajshfkajsfhkjafhkjasfhkjashdkajshdkajhdajskhdajskhdajkhdajkhdkajhdkajhdakdakjshdajkshdajskhdkajhsdjakhsdajkshdjakshdakjshdakjshakjshdakjdhakjsdhakjshdakjshdakjshdkajshdkajhdajksdhaksjdhakjsdhakjsdhakjsdhakjsdhkajsdhakjsdhakjsdhkajsdhkajshdkajsdhakjsdhkjasdhkajd",
-      "id": 5
+      "user": "ggg",
+      "review": "very good very good",
+      "id": 2
     }
   ]
 }

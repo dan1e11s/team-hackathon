@@ -16,25 +16,32 @@ const Reviews = () => {
   return (
     <Box sx={{ width: '100%', minHeight: '100vh' }}>
       <AddReviews />
-      <Box sx={{ maxWidth: '1120px', margin: '50px   auto' }}>
-        {reviews.map((item) => (
-          <Card sx={{ maxWidth: '650px', margin: '0 auto 40px' }} key={item.id}>
-            <CardHeader title={item.user} />
-            <CardContent>
-              <Typography>{item.review}</Typography>
-            </CardContent>
-            <CardActions>
-              <Button variant="contained">Edit</Button>
-              <Button
-                variant="contained"
-                onClick={() => deleteReviews(item.id)}
-              >
-                Delete
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </Box>
+      {reviews.length > 0 ? (
+        <Box sx={{ maxWidth: '1120px', margin: '50px   auto' }}>
+          {reviews.map((item) => (
+            <Card
+              sx={{ maxWidth: '650px', margin: '0 auto 40px' }}
+              key={item.id}
+            >
+              <CardHeader title={item.user} />
+              <CardContent>
+                <Typography>{item.review}</Typography>
+              </CardContent>
+              <CardActions>
+                <Button variant="contained">Edit</Button>
+                <Button
+                  variant="contained"
+                  onClick={() => deleteReviews(item, item.id)}
+                >
+                  Delete
+                </Button>
+              </CardActions>
+            </Card>
+          ))}
+        </Box>
+      ) : (
+        <h3>Пока нет отзывов!</h3>
+      )}
     </Box>
   );
 };

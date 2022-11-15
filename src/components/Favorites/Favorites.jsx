@@ -30,19 +30,8 @@ const Favorites = () => {
   }
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        minHeight: '100vh',
-
-        overflow: 'hidden',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // // alignItems: 'center',
-      }}
-    >
-      <h3>Your favorite list!</h3>
-      <Box
+    <div className="favoritepage">
+      <CatchingPokemonIcon
         sx={{
           fontSize: '35px',
           ml: '6%',
@@ -50,38 +39,58 @@ const Favorites = () => {
           cursor: 'pointer',
           color: 'white',
         }}
+        onClick={() => navigate('/product')}
+      />
+      <div
+        className="fronfavorite"
+        style={{
+          width: '100%',
+          minHeight: '100vh',
+          overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          marginTop: '2%',
+        }}
       >
-        {favorites?.favorites.map((elem) => (
-          <Card key={elem.item.id} sx={{ maxWidth: 345, marginBottom: '40px' }}>
-            <CardMedia
-              component="img"
-              height="140"
-              image={elem.item.image.front}
-              alt="pokemon"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {elem.item.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Price: {elem.item.price}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() => deleteFavorites(elem.item.id)}
-              >
-                Delete
-              </Button>
-              <Button size="small" onClick={favoritesCleaner}>
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </Box>
-    </Box>
+        <h2>Your favorite list!</h2>
+        <Box className="favoritebox">
+          {favorites?.favorites.map((elem) => (
+            <Card
+              className="favoriteCard"
+              key={elem.item.id}
+              sx={{ maxWidth: 345, marginBottom: '40px' }}
+            >
+              <CardMedia
+                component="img"
+                height="140"
+                image={elem.item.image.front}
+                alt="pokemon"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {elem.item.title}
+                </Typography>
+                <Typography variant="body2" className="favoriteprice">
+                  Price: {elem.item.price}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <button
+                  className="delete"
+                  onClick={() => deleteFavorites(elem.item.id)}
+                >
+                  Delete
+                </button>
+                <button className="button" onClick={favoritesCleaner}>
+                  Learn More
+                </button>
+              </CardActions>
+            </Card>
+          ))}
+        </Box>
+      </div>
+    </div>
   );
 };
 

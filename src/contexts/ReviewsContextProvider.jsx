@@ -35,9 +35,15 @@ const ReviewsContextProvider = ({ children }) => {
     getReviews();
   };
 
-  const deleteReviews = async (id) => {
-    await axios.delete(REVIEWS_API, id);
-    getReviews();
+  const deleteReviews = async (item, id) => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user.username === item.user) {
+      await axios.delete(`${REVIEWS_API}/${id}`);
+      getReviews();
+    } else {
+      alert('Вы не можете удалить этот отзыв!');
+      return;
+    }
   };
 
   const values = {
