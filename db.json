@@ -48,6 +48,13 @@
       "password": "123",
       "isAdmin": false,
       "id": 7
+    },
+    {
+      "username": "daniel",
+      "age": "19",
+      "password": "qwe",
+      "isAdmin": true,
+      "id": 8
     }
   ],
   "products": [
@@ -350,6 +357,33 @@
       "weight": 66.1,
       "abilities": "Static",
       "abilitiesDesc": "The Pokémon is charged with static electricity, so contact with it may cause paralysis."
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "user": "Dani",
+      "review": "Very very Good!"
+    },
+    {
+      "id": 2,
+      "user": "Abu",
+      "review": "Very very very Good!"
+    },
+    {
+      "user": "mama",
+      "review": "Very Good!",
+      "id": 3
+    },
+    {
+      "user": "mama",
+      "review": "Good Good ",
+      "id": 4
+    },
+    {
+      "user": "mama",
+      "review": "kjshkajshkajshfkajsfhkjafhkjasfhkjashdkajshdkajhdajskhdajskhdajkhdajkhdkajhdkajhdakdakjshdajkshdajskhdkajhsdjakhsdajkshdjakshdakjshdakjshakjshdakjdhakjsdhakjshdakjshdakjshdkajshdkajhdajksdhaksjdhakjsdhakjsdhakjsdhakjsdhkajsdhakjsdhakjsdhkajsdhkajshdkajsdhakjsdhkjasdhkajd",
+      "id": 5
     }
   ]
 }

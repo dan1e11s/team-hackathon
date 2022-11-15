@@ -16,6 +16,7 @@ import '../ProductSideBar/ProductSideBar.css';
 import { grey } from '@mui/material/colors';
 import FilterProduct from '../FilterProduct/FilterProduct';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import ReviewsIcon from '@mui/icons-material/Reviews';
 
 const drawerWidth = '220px';
 
@@ -142,6 +143,7 @@ export default function ProductSideBar() {
             </ListItemText>
           </ListItemButton>
           <ListItemButton
+            onClick={() => navigate('/reviews')}
             className="list-item-btn"
             sx={{
               minHeight: 48,
@@ -157,9 +159,9 @@ export default function ProductSideBar() {
                 justifyContent: 'center',
               }}
             >
-              <AdminPanelSettingsIcon />
+              <ReviewsIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Reviews</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>

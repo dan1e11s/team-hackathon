@@ -14,27 +14,13 @@ const Favorites = () => {
   useEffect(() => {
     getFavorites();
   }, []);
-  //   console.log(
-  //     favorites.favorites.map((item) => {
-  //       return item.item.id;
-  //     })
-  //   );
-
-  function favoritesCleaner() {
-    localStorage.removeItem('favorites');
-    getFavorites();
-  }
 
   return (
     <Box
       sx={{
         width: '100%',
         minHeight: '100vh',
-
         overflow: 'hidden',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // // alignItems: 'center',
       }}
     >
       <h3>Your favorite list!</h3>
@@ -71,9 +57,7 @@ const Favorites = () => {
               >
                 Delete
               </Button>
-              <Button size="small" onClick={favoritesCleaner}>
-                Learn More
-              </Button>
+              <Button size="small">Learn More</Button>
             </CardActions>
           </Card>
         ))}
