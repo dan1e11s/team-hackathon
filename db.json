@@ -27,6 +27,20 @@
       "password": "mm",
       "isAdmin": true,
       "id": 4
+    },
+    {
+      "username": "mama",
+      "age": "44",
+      "password": "ff",
+      "isAdmin": false,
+      "id": 5
+    },
+    {
+      "username": "jojo",
+      "age": "11",
+      "password": "vgv",
+      "isAdmin": false,
+      "id": 6
     }
   ],
   "products": [

@@ -11,11 +11,7 @@ function ResponsiveAppBar() {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="homepage"
-      style={{
-        backgroundImage: `url("https://wallpaperaccess.com/full/379959.png")`,
-      }}>
+    <div className="homepage">
       <div className="navbar">
         <CatchingPokemonIcon
           className="icon"

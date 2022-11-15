@@ -1,7 +1,7 @@
 .loginmain {
   height: 100vh;
   color: white;
-  background: url("https://images2.alphacoders.com/119/119492.jpg");
+  background: url("../../media/loginpageback.jpeg");
   background-size: 1600px 100vh;
 }
 .loginpage {
@@ -13,7 +13,7 @@
   height: 300px;
   display: flex;
   flex-direction: column;
-  margin-top: 135px;
+  margin-top: 130px;
 }
 .input {
   color: #beb9b9;

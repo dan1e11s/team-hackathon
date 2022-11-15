@@ -1,7 +1,7 @@
 .mainregister {
   height: 100vh;
   color: white;
-  background: url("http://cdn.wallpaperhi.com/1920x1200/20140817/pokemon%20bulbasaur%20simple%20background%20black%20background_www.wallpaperhi.com_42.jpg");
+  background: url("../../media/registerpageback.jpg");
   background-size: 1600px 100vh;
 }
 .registerpage {
