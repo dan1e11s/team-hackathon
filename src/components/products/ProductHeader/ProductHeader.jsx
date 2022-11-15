@@ -11,7 +11,7 @@ import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+import Avatar from "@mui/material/Avatar";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
@@ -54,6 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function ProductHeader({ setPage }) {
+  const [user, setUser] = useState("");
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
@@ -71,8 +72,12 @@ export default function ProductHeader({ setPage }) {
     setPage(1);
   }, [searchParams]);
 
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const username = JSON.parse(localStorage.getItem("user"));
+  useEffect(() => {
+    username ? setUser(username.username) : setUser("Guest");
+  }, [username]);
 
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
@@ -106,7 +111,7 @@ export default function ProductHeader({ setPage }) {
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit">
-          <AccountCircle />
+          <Avatar alt={user[0]} src="..." />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -158,6 +163,7 @@ export default function ProductHeader({ setPage }) {
           sx={{
             width: "85px",
             display: { xs: "none", md: "flex" },
+            mr: "20px",
           }}>
           <IconButton
             size="large"
@@ -165,7 +171,7 @@ export default function ProductHeader({ setPage }) {
             aria-label="account of current user"
             aria-haspopup="true"
             color="inherit">
-            <AccountCircle />
+            <Avatar alt={user.toUpperCase()[0]} src="..." />
           </IconButton>
           <IconButton
             size="large"

@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import MuiDrawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import HomeIcon from '@mui/icons-material/Home';
-import { IconButton } from '@mui/material';
-import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import '../ProductSideBar/ProductSideBar.css';
-import { grey } from '@mui/material/colors';
-import FilterProduct from '../FilterProduct/FilterProduct';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
-import CommentIcon from '@mui/icons-material/Comment';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+import MuiDrawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import HomeIcon from "@mui/icons-material/Home";
+import { IconButton } from "@mui/material";
+import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import "../ProductSideBar/ProductSideBar.css";
+import { grey } from "@mui/material/colors";
+import FilterProduct from "../FilterProduct/FilterProduct";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import CommentIcon from "@mui/icons-material/Comment";
 
 const drawerWidth = "15%";
 
@@ -145,10 +145,6 @@ export default function ProductSideBar() {
                 justifyContent: "center",
               }}>
               <AdminPanelSettingsIcon />
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
           </ListItemButton>
@@ -156,7 +152,7 @@ export default function ProductSideBar() {
       </List>
       <Divider color={grey[600]} />
       <List>
-        <ListItem disablePadding sx={{ display: 'block' }}>
+        <ListItem disablePadding sx={{ display: "block" }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
@@ -164,16 +160,14 @@ export default function ProductSideBar() {
               justifyContent: open ? "initial" : "center",
               px: 2.5,
             }}
-            onClick={() => navigate('/admin')}
-          >
+            onClick={() => navigate("/admin")}>
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
                 mr: open ? 3 : "auto",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               <AdminPanelSettingsIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>
