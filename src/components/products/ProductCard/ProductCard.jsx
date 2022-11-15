@@ -12,19 +12,20 @@ import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Tooltip from '@mui/material/Tooltip';
 import { useCart } from '../../../contexts/CartContextProvider';
+import { useFavorites } from '../../../contexts/FavoritesContextProvider';
 
 const ProductCard = ({ item }) => {
   const [like, setLike] = useState(false);
   const { addProductToCart, checkProductInCart } = useCart();
-
+  const { addFavorites, checkFavorites } = useFavorites();
   const navigate = useNavigate();
-  console.log(item);
 
   return (
     <Card
+      className="product-card"
       sx={{
-        maxWidth: '350px',
-        margin: '0 25px 0 0',
+        maxWidth: '480px',
+        margin: '0 25px 40px 0',
         padding: '20px',
         backgroundColor: '#101011',
         color: '#999999',
@@ -60,8 +61,12 @@ const ProductCard = ({ item }) => {
           </IconButton>
         </Tooltip>
         <Tooltip title="Add to favorites">
-          <IconButton>
-            <BookmarkAddIcon sx={{ color: '#999999' }} />
+          <IconButton onClick={() => addFavorites(item)}>
+            <BookmarkAddIcon
+              sx={{
+                color: `${checkFavorites(item.id) ? '#388E3C' : '#999999'}`,
+              }}
+            />
           </IconButton>
         </Tooltip>
         <Tooltip title="Like">

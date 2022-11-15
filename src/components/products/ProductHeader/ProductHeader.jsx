@@ -27,7 +27,7 @@ const Search = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     width: "60%",
   },
-}));
+})); 
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -130,8 +130,9 @@ export default function ProductHeader({ setPage }) {
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
-          color="inherit">
-          <Badge badgeContent={17} color="error">
+          color="inherit"
+        >
+          <Badge badgeContent={cartLength} color="error">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -143,17 +144,20 @@ export default function ProductHeader({ setPage }) {
   return (
     <AppBar
       sx={{
-        backgroundColor: "#101011",
+        width: '100%',
+        backgroundColor: '#101011',
       }}
-      position="fixed">
+      position="static"
+    >
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}>
-        <IconButton onClick={() => navigate("/product")}>
-          <CatchingPokemonIcon sx={{ color: "white" }} />
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <IconButton className="header-icon">
+          <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
         <Toolbar sx={{ width: "60%", margin: "0 auto" }}>
           <Search>

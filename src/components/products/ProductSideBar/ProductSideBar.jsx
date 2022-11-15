@@ -1,25 +1,23 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { styled } from "@mui/material/styles";
-import MuiDrawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
-import { IconButton } from "@mui/material";
-import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
-import "../ProductSideBar/ProductSideBar.css";
-import { grey } from "@mui/material/colors";
-import FilterProduct from "../FilterProduct/FilterProduct";
-import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { useEffect } from "react";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { styled } from '@mui/material/styles';
+import MuiDrawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import HomeIcon from '@mui/icons-material/Home';
+import { IconButton } from '@mui/material';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import '../ProductSideBar/ProductSideBar.css';
+import { grey } from '@mui/material/colors';
+import FilterProduct from '../FilterProduct/FilterProduct';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
-const drawerWidth = "15%";
+const drawerWidth = '220px';
 
 const openedMixin = theme => ({
   color: "#999999",
@@ -58,10 +56,8 @@ const Drawer = styled(MuiDrawer, {
 })(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
-  position: "absolute",
-  zIndex: "2",
-  whiteSpace: "nowrap",
-  boxSizing: "border-box",
+  whiteSpace: 'nowrap',
+  boxSizing: 'border-box',
   ...(open && {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": openedMixin(theme),
@@ -90,10 +86,12 @@ export default function ProductSideBar() {
       onMouseOver={() => setOpen(true)}
       onMouseOut={() => setOpen(false)}
       variant="permanent"
-      open={open}>
+      open={open}
+      className="sidebar"
+    >
       <DrawerHeader>
-        <IconButton>
-          <CatchingPokemonIcon sx={{ color: "white" }} />
+        <IconButton onClick={() => navigate('/')}>
+          <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
       </DrawerHeader>
       <List>
@@ -119,6 +117,7 @@ export default function ProductSideBar() {
           </ListItemButton>
           <FilterProduct open={open} />
           <ListItemButton
+            onClick={() => navigate('/favorities')}
             className="list-item-btn"
             sx={{
               minHeight: 48,
