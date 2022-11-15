@@ -2,11 +2,8 @@ import * as React from 'react';
 import '../HomePage/HomePage.css';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-import * as React from "react";
-import "../HomePage/HomePage.css";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
-import logo from "../../media/homepagelogo.png";
+import '../HomePage/HomePage.css';
+import logo from '../../media/homepagelogo.png';
 
 // custom imports
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
