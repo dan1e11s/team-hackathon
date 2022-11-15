@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { useProducts } from '../../../contexts/ProductContextProvider';
-import { useCart } from '../../../contexts/CartContextProvider';
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MoreIcon from '@mui/icons-material/MoreVert';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useProducts } from "../../../contexts/ProductContextProvider";
+import { styled, alpha } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import Badge from "@mui/material/Badge";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
+import Avatar from "@mui/material/Avatar";
+import MoreIcon from "@mui/icons-material/MoreVert";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled('div')(({ theme }) => ({
   width: '60%',
@@ -55,6 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function ProductHeader({ setPage }) {
+  const [user, setUser] = useState("");
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
@@ -73,8 +73,12 @@ export default function ProductHeader({ setPage }) {
     setPage(1);
   }, [searchParams]);
 
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const username = JSON.parse(localStorage.getItem("user"));
+  useEffect(() => {
+    username ? setUser(username.username) : setUser("Guest");
+  }, [username]);
 
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
@@ -108,9 +112,8 @@ export default function ProductHeader({ setPage }) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
+          color="inherit">
+          <Avatar alt={user[0]} src="..." />
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -163,18 +166,17 @@ export default function ProductHeader({ setPage }) {
         </Toolbar>
         <Box
           sx={{
-            width: '85px',
-            display: { xs: 'none', md: 'flex' },
-          }}
-        >
+            width: "85px",
+            display: { xs: "none", md: "flex" },
+            mr: "20px",
+          }}>
           <IconButton
             size="large"
             edge="end"
             aria-label="account of current user"
             aria-haspopup="true"
-            color="inherit"
-          >
-            <AccountCircle />
+            color="inherit">
+            <Avatar alt={user.toUpperCase()[0]} src="..." />
           </IconButton>
           <IconButton
             onClick={() => navigate('/cart')}

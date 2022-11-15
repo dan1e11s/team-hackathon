@@ -148,10 +148,9 @@ export default function ProductSideBar() {
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}>
               <AdminPanelSettingsIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
@@ -160,7 +159,7 @@ export default function ProductSideBar() {
       </List>
       <Divider color={grey[600]} />
       <List>
-        <ListItem disablePadding sx={{ display: 'block' }}>
+        <ListItem disablePadding sx={{ display: "block" }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
@@ -168,8 +167,7 @@ export default function ProductSideBar() {
               justifyContent: open ? 'initial' : 'center',
               px: 2.5,
             }}
-            onClick={() => navigate('/admin')}
-          >
+            onClick={() => navigate("/admin")}>
             <ListItemIcon
               sx={{
                 color,

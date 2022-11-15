@@ -2,6 +2,7 @@ import * as React from "react";
 import "../HomePage/HomePage.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import logo from "../../media/homepagelogo.png";
 
 // custom imports
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
@@ -55,11 +56,7 @@ function ResponsiveAppBar() {
           unknown. One of their main features is that they can be caught using a
           Poké Ball, which allows them to be carried around.
         </p>
-        <img
-          className="homeimg"
-          src="https://www.freepnglogos.com/uploads/pokemon-logo-transparent-png-2.png"
-          alt="pokemon"
-        />
+        <img className="homeimg" src={logo} alt="pokemon" />
       </div>
     </div>
   );
