@@ -82,3 +82,37 @@
   opacity: 0.9;
   border: 2px solid #999999;
 }
+@media all and (max-width: 1024px) {
+  .payment-inp {
+    width: 300px;
+  }
+}
+@media all and (max-width: 768px) {
+  .payment-block {
+    background: none;
+    background-color: black;
+  }
+  .payment-wrapper {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 425px) {
+  .payment-inp {
+    width: 200px;
+    margin: 15px auto;
+  }
+  .payment-wrapper {
+    width: 80%;
+  }
+}
+@media all and (max-width: 375px) {
+  .payment-inp-small {
+    width: 100px;
+  }
+}
+@media all and (max-width: 320px) {
+  .payment-wrapper {
+    height: 80vh;
+  }
+}
