@@ -7,31 +7,48 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
+import '../../components/Favorites/Favorites.css';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+import { useNavigate } from 'react-router-dom';
 
 const Favorites = () => {
   const { getFavorites, favorites, deleteFavorites } = useFavorites();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getFavorites();
   }, []);
+  //   console.log(
+  //     favorites.favorites.map((item) => {
+  //       return item.item.id;
+  //     })
+  //   );
+
+  function favoritesCleaner() {
+    localStorage.removeItem('favorites');
+    getFavorites();
+  }
 
   return (
     <Box
       sx={{
         width: '100%',
         minHeight: '100vh',
+
         overflow: 'hidden',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // // alignItems: 'center',
       }}
     >
       <h3>Your favorite list!</h3>
       <Box
         sx={{
-          maxWidth: '1120px',
-          border: '1px solid red',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
+          fontSize: '35px',
+          ml: '6%',
+          mt: '2.5%',
+          cursor: 'pointer',
+          color: 'white',
         }}
       >
         {favorites?.favorites.map((elem) => (
@@ -57,7 +74,9 @@ const Favorites = () => {
               >
                 Delete
               </Button>
-              <Button size="small">Learn More</Button>
+              <Button size="small" onClick={favoritesCleaner}>
+                Learn More
+              </Button>
             </CardActions>
           </Card>
         ))}

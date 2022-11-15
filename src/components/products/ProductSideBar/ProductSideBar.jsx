@@ -1,3 +1,4 @@
+import ReviewsIcon from '@mui/icons-material/Reviews';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
@@ -16,7 +17,6 @@ import '../ProductSideBar/ProductSideBar.css';
 import { grey } from '@mui/material/colors';
 import FilterProduct from '../FilterProduct/FilterProduct';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
-import ReviewsIcon from '@mui/icons-material/Reviews';
 
 const drawerWidth = '220px';
 
@@ -91,7 +91,7 @@ export default function ProductSideBar() {
       className="sidebar"
     >
       <DrawerHeader>
-        <IconButton onClick={() => navigate('/')}>
+        <IconButton onClick={() => navigate('/product')}>
           <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
       </DrawerHeader>

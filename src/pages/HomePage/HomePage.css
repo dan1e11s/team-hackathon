@@ -58,7 +58,7 @@ h2 {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    background: url('https://wallpaperaccess.com/full/379959.png');
+    background: url("https://wallpaperaccess.com/full/379959.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -75,5 +75,31 @@ h2 {
 @media all and (max-width: 426px) {
   .homeimg {
     display: none;
+  }
+  .info {
+    width: 75%;
+    margin-left: 10%;
+  }
+  .navbar {
+    padding-top: 4%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .info {
+    width: 80%;
+  }
+}
+@media all and (max-width: 768px) {
+  .info {
+    width: 80%;
+  }
+}
+@media all and (max-width: 320px) {
+  .homepage {
+    background-size: 5000px;
+  }
+  .homepage-btn {
+    height: 30px;
   }
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../paymentForm/PaymentForm.css';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import Slide from '@mui/material/Slide';
-import TagFacesRoundedIcon from '@mui/icons-material/TagFacesRounded';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../paymentForm/PaymentForm.css";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import Slide from "@mui/material/Slide";
+import TagFacesRoundedIcon from "@mui/icons-material/TagFacesRounded";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -21,13 +21,15 @@ const PaymentForm = () => {
 
   const handleClose = () => {
     setOpen(false);
-    navigate('/product');
+    navigate("/product");
   };
 
   return (
     <div className="payment-block">
       <div className="payment-wrapper">
-        <h3 style={{ fontSize: '25px' }}>Your Payment Details</h3>
+        <h2 style={{ fontSize: "25px", marginTop: "3%" }}>
+          Your Payment Details
+        </h2>
         <form>
           <label className="payment-label" for="name">
             Full Name
@@ -81,8 +83,7 @@ const PaymentForm = () => {
           onClick={() => {
             handleClickOpen();
           }}
-          className="payment-btn"
-        >
+          className="payment-btn">
           Pay Now
         </button>
       </div>
@@ -91,13 +92,11 @@ const PaymentForm = () => {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <DialogContent sx={{ backgroundColor: '#64ffda' }}>
+        aria-describedby="alert-dialog-slide-description">
+        <DialogContent sx={{ backgroundColor: "#64ffda" }}>
           <DialogContentText
             id="alert-dialog-slide-description"
-            sx={{ display: 'flex', alignItems: 'center', color: 'white' }}
-          >
+            sx={{ display: "flex", alignItems: "center", color: "white" }}>
             <TagFacesRoundedIcon />
             Thank you for your purchase!
           </DialogContentText>

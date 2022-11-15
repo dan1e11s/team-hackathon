@@ -28,7 +28,7 @@ export default function Cart() {
   return (
     <div>
       <TableContainer component={Paper} className="cartt">
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell className="texts">Picture</TableCell>
@@ -58,7 +58,7 @@ export default function Cart() {
                 key={elem.item.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                 <TableCell component="th" scope="row">
-                  <img src={elem.item.image.front} />
+                  <img className="pokeImg" src={elem.item.image.front} />
                 </TableCell>
                 <TableCell className="texts" align="right">
                   {elem.item.title}
