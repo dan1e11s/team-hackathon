@@ -34,6 +34,8 @@
 .homepage {
   height: 100vh;
   color: white;
+  background: url("../../media/homepageback.png");
+  background-size: 1800px 1100px;
 }
 .info {
   display: flex;

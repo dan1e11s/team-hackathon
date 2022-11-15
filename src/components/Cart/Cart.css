@@ -1,0 +1,35 @@
+.cartt {
+  height: 100vh;
+  background: url(../../media/backfcart.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.texts {
+  color: #999999 !important;
+}
+.counttexts {
+  border-color: #999999 !important;
+  background-color: #999999 !important;
+  border-radius: 9px;
+}
+.delete {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border: red;
+  height: 35px;
+  cursor: pointer;
+  width: 80px;
+  font-weight: 700;
+}
+.H {
+  margin-left: 20px;
+}
+#accept {
+  margin-left: 20px;
+  height: 31px;
+}
+#back {
+  height: 31px;
+  margin-left: 20px;
+}
