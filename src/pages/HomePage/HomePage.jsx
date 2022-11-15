@@ -1,45 +1,35 @@
-import * as React from "react";
-import "../HomePage/HomePage.css";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
+import * as React from 'react';
+import '../HomePage/HomePage.css';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 // custom imports
-import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="homepage"
-      style={{
-        backgroundImage: `url("https://wallpaperaccess.com/full/379959.png")`,
-      }}>
+    <div className="homepage">
       <div className="navbar">
         <CatchingPokemonIcon
           className="icon"
-          sx={{ color: "white", fontSize: "35px", cursor: "pointer" }}
-          onClick={() => navigate("/")}
+          sx={{ color: 'white', fontSize: '35px', cursor: 'pointer' }}
+          onClick={() => navigate('/')}
         />
-        <ul className="homepage-list">
-          <li
-            className="homepage-list-item"
-            onClick={() => navigate("/product")}>
-            Products
-          </li>
-          <li className="homepage-list-item">About us</li>
-        </ul>
         <div className="stack">
           <Button
             className="homepage-btn"
             variant="text"
-            onClick={() => navigate("/login")}>
+            onClick={() => navigate('/login')}
+          >
             login
           </Button>
           <Button
             className="homepage-btn"
             variant="contained"
-            onClick={() => navigate("/register")}>
+            onClick={() => navigate('/register')}
+          >
             register
           </Button>
         </div>

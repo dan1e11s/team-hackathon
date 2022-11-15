@@ -4,15 +4,11 @@
   background: url(../../../media/bg-4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
 .MuiPagination-ul .MuiButtonBase-root {
   color: white;
-}
-
-@media (width: 320px) {
-  .list-box {
-    overflow: scroll;
-  }
 }

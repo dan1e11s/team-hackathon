@@ -29,8 +29,8 @@ const ProductList = ({ page, setPage }) => {
     <Box className="list-box">
       <Box
         sx={{
-          width: '75%',
-          minHeight: '85vh',
+          width: '100%',
+          minHeight: '82.3vh',
           margin: '0 auto',
           marginTop: '30px',
           display: 'flex',
@@ -52,7 +52,8 @@ const ProductList = ({ page, setPage }) => {
         }}
       >
         <Pagination
-          sx={{ position: 'absolute', bottom: '0' }}
+          className="pagination"
+          sx={{ position: 'static', bottom: '0' }}
           count={count}
           page={page}
           onChange={handlePage}

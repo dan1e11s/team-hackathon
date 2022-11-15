@@ -11,10 +11,9 @@ const ProductPage = () => {
       <ProductSideBar />
       <div
         style={{
-          width: '95.66%',
-          float: 'right',
-          height: '100vh',
-          position: 'relative',
+          width: '100%',
+          minHeight: '100vh',
+          overflow: 'hidden',
         }}
       >
         <ProductHeader setPage={setPage} />

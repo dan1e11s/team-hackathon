@@ -25,6 +25,7 @@ const ProductContextProvider = ({ children }) => {
   const PRODUCTS_API = 'http://localhost:8000/products';
 
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+
   const navigate = useNavigate();
 
   const location = useLocation();

@@ -17,6 +17,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
 import { useNavigate } from 'react-router-dom';
+import '../ProductHeader/ProductHeader.css';
 
 const Search = styled('div')(({ theme }) => ({
   width: '60%',
@@ -26,7 +27,7 @@ const Search = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     width: '60%',
   },
-}));
+})); 
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -46,7 +47,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     [theme.breakpoints.up('sm')]: {
-      width: '100%',
+      maxWidth: '100%',
       '&:focus': {
         width: '100%',
       },
@@ -120,7 +121,7 @@ export default function ProductHeader({ setPage }) {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={cartLength} color="error">
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -132,9 +133,10 @@ export default function ProductHeader({ setPage }) {
   return (
     <AppBar
       sx={{
+        width: '100%',
         backgroundColor: '#101011',
       }}
-      position="fixed"
+      position="static"
     >
       <Box
         sx={{
@@ -143,7 +145,7 @@ export default function ProductHeader({ setPage }) {
           alignItems: 'center',
         }}
       >
-        <IconButton onClick={() => navigate('/')}>
+        <IconButton className="header-icon">
           <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
         <Toolbar sx={{ width: '60%', margin: '0 auto' }}>

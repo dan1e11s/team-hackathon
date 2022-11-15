@@ -16,9 +16,8 @@ import '../ProductSideBar/ProductSideBar.css';
 import { grey } from '@mui/material/colors';
 import FilterProduct from '../FilterProduct/FilterProduct';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
-const drawerWidth = '15%';
+const drawerWidth = '220px';
 
 const openedMixin = (theme) => ({
   color: '#999999',
@@ -39,9 +38,6 @@ const closedMixin = (theme) => ({
   }),
   overflowX: 'hidden',
   width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
-  },
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -57,8 +53,6 @@ const Drawer = styled(MuiDrawer, {
 })(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
-  position: 'absolute',
-  zIndex: '2',
   whiteSpace: 'nowrap',
   boxSizing: 'border-box',
   ...(open && {
@@ -84,9 +78,10 @@ export default function ProductSideBar() {
       onMouseOut={() => setOpen(false)}
       variant="permanent"
       open={open}
+      className="sidebar"
     >
       <DrawerHeader>
-        <IconButton>
+        <IconButton onClick={() => navigate('/')}>
           <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
       </DrawerHeader>
@@ -115,6 +110,7 @@ export default function ProductSideBar() {
           </ListItemButton>
           <FilterProduct open={open} />
           <ListItemButton
+            onClick={() => navigate('/favorities')}
             className="list-item-btn"
             sx={{
               minHeight: 48,
