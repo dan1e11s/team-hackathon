@@ -11,13 +11,13 @@
 
 .homepage {
   width: 100%;
-  background: url('https://wallpaperaccess.com/full/379959.png');
   min-height: 100vh;
   color: white;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background: url("../../media/homepageback.png");
 }
 .info {
   display: flex;

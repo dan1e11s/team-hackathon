@@ -19,37 +19,40 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const drawerWidth = '220px';
 
-const openedMixin = (theme) => ({
-  color: '#999999',
-  backgroundColor: '#101011',
+const openedMixin = theme => ({
+  color: "#999999",
+  backgroundColor: "#101011",
   width: drawerWidth,
-  transition: theme.transitions.create('width', {
+  transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
-  overflowX: 'hidden',
+  overflowX: "hidden",
 });
 
-const closedMixin = (theme) => ({
-  backgroundColor: '#101011',
-  transition: theme.transitions.create('width', {
+const closedMixin = theme => ({
+  backgroundColor: "#101011",
+  transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  overflowX: 'hidden',
+  overflowX: "hidden",
   width: `calc(${theme.spacing(7)} + 1px)`,
+  [theme.breakpoints.up("sm")]: {
+    width: `calc(${theme.spacing(8)} + 1px)`,
+  },
 });
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
 }));
 
 const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: prop => prop !== "open",
 })(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
@@ -57,18 +60,24 @@ const Drawer = styled(MuiDrawer, {
   boxSizing: 'border-box',
   ...(open && {
     ...openedMixin(theme),
-    '& .MuiDrawer-paper': openedMixin(theme),
+    "& .MuiDrawer-paper": openedMixin(theme),
   }),
   ...(!open && {
     ...closedMixin(theme),
-    '& .MuiDrawer-paper': closedMixin(theme),
+    "& .MuiDrawer-paper": closedMixin(theme),
   }),
 }));
 
-const color = { color: '#999999' };
+const color = { color: "#999999" };
 
 export default function ProductSideBar() {
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState("");
+
+  const username = JSON.parse(localStorage.getItem("user"));
+  useEffect(() => {
+    username ? setUser(username.isAdmin) : setUser(false);
+  }, [user]);
 
   const navigate = useNavigate();
 
@@ -86,24 +95,22 @@ export default function ProductSideBar() {
         </IconButton>
       </DrawerHeader>
       <List>
-        <ListItem disablePadding sx={{ display: 'block' }}>
+        <ListItem disablePadding sx={{ display: "block" }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
+              justifyContent: open ? "initial" : "center",
               px: 2.5,
             }}
-            onClick={() => navigate('/product')}
-          >
+            onClick={() => navigate("/product")}>
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Home</ListItemText>
@@ -114,18 +121,16 @@ export default function ProductSideBar() {
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
+              justifyContent: open ? "initial" : "center",
               px: 2.5,
-            }}
-          >
+            }}>
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}>
               <BookmarkIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>
@@ -136,18 +141,16 @@ export default function ProductSideBar() {
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
+              justifyContent: open ? "initial" : "center",
               px: 2.5,
-            }}
-          >
+            }}>
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}>
               <AdminPanelSettingsIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
@@ -156,27 +159,30 @@ export default function ProductSideBar() {
       </List>
       <Divider color={grey[600]} />
       <List>
-        <ListItem disablePadding sx={{ display: 'block' }}>
+        <ListItem disablePadding sx={{ display: "block" }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
+              justifyContent: open ? "initial" : "center",
               px: 2.5,
             }}
-            onClick={() => navigate('/admin')}
-          >
+            onClick={() => navigate("/admin")}>
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+                display: `${user === true ? "block" : "none"}`,
+              }}>
               <AdminPanelSettingsIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>
+            <ListItemText
+              sx={{
+                opacity: open ? 1 : 0,
+                display: `${user === true ? "block" : "none"}`,
+              }}>
               Admin Panel
             </ListItemText>
           </ListItemButton>

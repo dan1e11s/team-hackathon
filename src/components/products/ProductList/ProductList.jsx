@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import ProductCard from '../ProductCard/ProductCard';
-import { useProducts } from '../../../contexts/ProductContextProvider';
-import { Box } from '@mui/material';
-import Pagination from '@mui/material/Pagination';
-import '../ProductList/ProductList.css';
+import React, { useEffect } from "react";
+import ProductCard from "../ProductCard/ProductCard";
+import { useProducts } from "../../../contexts/ProductContextProvider";
+import { Box } from "@mui/material";
+import Pagination from "@mui/material/Pagination";
+import "../ProductList/ProductList.css";
 
 const ProductList = ({ page, setPage }) => {
   const { products, getProducts } = useProducts();
@@ -40,17 +40,16 @@ const ProductList = ({ page, setPage }) => {
         }}
       >
         {products ? (
-          currentData().map((item) => <ProductCard key={item.id} item={item} />)
+          currentData().map(item => <ProductCard key={item.id} item={item} />)
         ) : (
           <h3>Loading...</h3>
         )}
       </Box>
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-      >
+          display: "flex",
+          justifyContent: "center",
+        }}>
         <Pagination
           className="pagination"
           sx={{ position: 'static', bottom: '0' }}

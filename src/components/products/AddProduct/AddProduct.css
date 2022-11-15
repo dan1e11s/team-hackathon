@@ -1,0 +1,17 @@
+.add-form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.add-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-main {
+  height: 100vh;
+  color: white;
+  background: url("../../../media/addbackground.png");
+  background-size: 1500px 100vh;
+}

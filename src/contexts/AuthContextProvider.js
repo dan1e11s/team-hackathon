@@ -17,9 +17,7 @@ const AuthContextProvider = ({ children }) => {
       item => item.username === username && item.password === password
     );
     if (checkLogin) {
-      localStorage.setItem("user", username);
-      alert("Вы вошли в аккаунт");
-      navigate("/");
+      localStorage.setItem("user", JSON.stringify(checkLogin));
     } else {
       alert("У вас ошибка в имени пользователя или пароле");
     }

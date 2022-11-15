@@ -1,0 +1,17 @@
+.edit-form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.edit-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-main {
+  height: 100vh;
+  color: white;
+  background: url("../../../media/EDITBACKGROUN.png");
+  background-size: 1500px 100vh;
+}
