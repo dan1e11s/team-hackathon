@@ -12,6 +12,6 @@
 .edit-main {
   height: 100vh;
   color: white;
-  background: url("../../../media/EDITBACKGROUN.png");
+  background: url('../../../media/EDITBACKGROUN.png');
   background-size: 1500px 100vh;
 }
