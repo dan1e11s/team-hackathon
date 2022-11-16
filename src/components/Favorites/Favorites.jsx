@@ -42,7 +42,7 @@ const Favorites = () => {
         onClick={() => navigate("/product")}
       />
       <div
-        className="fronfavorite"
+        className="frontfavorite"
         style={{
           width: "100%",
           minHeight: "100vh",
