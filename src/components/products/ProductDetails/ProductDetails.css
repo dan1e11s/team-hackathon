@@ -7,3 +7,78 @@
   cursor: pointer;
   opacity: 0.7;
 }
+@media all and (max-width: 768px) {
+  .detailsImg {
+    height: 350px !important;
+  }
+  .detailsDesc {
+    width: 250px;
+  }
+  .detailsBox {
+    width: 250px;
+  }
+}
+@media all and (max-width: 425px) {
+  .detailsMain {
+    min-height: 100%;
+    overflow: hidden;
+  }
+  .detailsImg {
+    height: 250px !important;
+  }
+  .detailsPage {
+    display: flex;
+    flex-direction: column;
+  }
+  .boxforImg {
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  .detailsDesc {
+    margin-bottom: 15px !important;
+  }
+  .detailsBox {
+    height: 60px;
+  }
+  .detailsTitle {
+    font-size: 22px !important;
+    margin-bottom: 0px !important;
+  }
+  .detailsbot {
+    margin-right: 128px;
+  }
+  .detailsP {
+    font-size: 16px !important;
+    margin-bottom: 8px;
+  }
+  .detailsPaper {
+    width: 140px;
+  }
+}
+@media all and (max-width: 320px) {
+  .boxforImg {
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+  .detailsImg {
+    height: 220px !important;
+  }
+  .detailsDesc {
+    font-size: 14px !important;
+    height: 80px;
+    padding: 0 !important;
+    width: 200px;
+  }
+  .detailsTitle {
+    font-size: 18px !important;
+  }
+  .detailsP {
+    margin-right: 30px !important;
+  }
+  .detailsBox {
+    margin-right: 30px;
+  }
+  .detailsPaper {
+    width: 200px;
+  }
+}
