@@ -31,7 +31,14 @@ export default function ProductDetails() {
   return (
     <>
       {oneProduct ? (
-        <>
+        <div
+          className="details"
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
           <Popper
             open={open}
             anchorEl={anchorEl}
@@ -155,7 +162,7 @@ export default function ProductDetails() {
               </div>
             </div>
           </div>
-        </>
+        </div>
       ) : (
         <h4 style={{ color: "#999999" }}>Loading...</h4>
       )}
