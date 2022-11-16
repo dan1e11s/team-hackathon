@@ -7,7 +7,15 @@
   cursor: pointer;
   opacity: 0.7;
 }
+@media all and (max-width: 1440px) {
+  .detailsMain {
+    max-height: 100vh;
+  }
+}
 @media all and (max-width: 768px) {
+  .detailsMain {
+    padding-right: 2% !important;
+  }
   .detailsImg {
     height: 350px !important;
   }
@@ -17,11 +25,18 @@
   .detailsBox {
     width: 250px;
   }
+  .detailsbot {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 @media all and (max-width: 425px) {
   .detailsMain {
-    min-height: 100%;
-    overflow: hidden;
+    margin-top: 0;
+    padding-right: 2% !important;
+  }
+  .details {
+    min-height: 100vh !important;
   }
   .detailsImg {
     height: 250px !important;
@@ -35,10 +50,7 @@
     margin-left: 30px;
   }
   .detailsDesc {
-    margin-bottom: 15px !important;
-  }
-  .detailsBox {
-    height: 60px;
+    margin-bottom: 10px !important;
   }
   .detailsTitle {
     font-size: 22px !important;
@@ -55,7 +67,17 @@
     width: 140px;
   }
 }
+@media all and (max-width: 375px) {
+  .details {
+    min-height: 100vh !important;
+    overflow: hidden;
+  }
+}
 @media all and (max-width: 320px) {
+  .details {
+    min-height: 100vh;
+    overflow: hidden;
+  }
   .boxforImg {
     margin-left: 50px;
     margin-top: 25px;
