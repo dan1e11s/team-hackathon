@@ -25,10 +25,9 @@ const AddReviews = () => {
   }
 
   return (
-    <Box sx={{ marginTop: '50px' }}>
+    <Box>
       <Box
         sx={{
-          border: '1px solid red',
           width: '500px',
           margin: '0 auto',
           padding: '20px',
@@ -37,8 +36,7 @@ const AddReviews = () => {
         <TextField
           sx={{ width: '100%', color: 'red' }}
           id="standard-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
+          label="Enter Review"
           multiline
           variant="standard"
           value={review}

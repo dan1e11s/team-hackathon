@@ -375,34 +375,9 @@
   ],
   "reviews": [
     {
-      "user": "ggg",
-      "review": "pro",
-      "id": 1
-    },
-    {
-      "user": "ggg",
-      "review": "ret",
+      "user": "dani",
+      "review": "Good Good Good",
       "id": 2
-    },
-    {
-      "user": "ggg",
-      "review": "ыфвфыв",
-      "id": 3
-    },
-    {
-      "user": "ggg",
-      "review": "asjkdskjhdkash",
-      "id": 4
-    },
-    {
-      "user": "dani",
-      "review": "j",
-      "id": 5
-    },
-    {
-      "user": "dani",
-      "review": "hi",
-      "id": 6
     }
   ]
 }

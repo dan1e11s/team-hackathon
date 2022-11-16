@@ -31,10 +31,9 @@ const EditReviews = ({ input, setInput }) => {
     }
   }
   return (
-    <Box sx={{ marginTop: '50px' }}>
+    <Box>
       <Box
         sx={{
-          border: '1px solid red',
           width: '500px',
           margin: '0 auto',
           color: '#999999',
@@ -44,8 +43,7 @@ const EditReviews = ({ input, setInput }) => {
         <TextField
           sx={{ width: '100%' }}
           id="standard-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
+          label="Enter Review"
           multiline
           variant="standard"
           value={review}

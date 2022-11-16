@@ -17,7 +17,14 @@ const Reviews = () => {
   }, []);
 
   return (
-    <Box sx={{ width: '100%', minHeight: '100vh' }}>
+    <Box
+      sx={{
+        width: '100%',
+        minHeight: '100vh',
+        backgroundColor: '#999999',
+        paddingTop: '50px',
+      }}
+    >
       {input ? (
         <EditReviews input={input} setInput={setInput} />
       ) : (
@@ -32,7 +39,12 @@ const Reviews = () => {
         >
           {reviews.map((item) => (
             <Card
-              sx={{ maxWidth: '650px', margin: '0 auto 40px' }}
+              sx={{
+                maxWidth: '650px',
+                margin: '0 auto 40px',
+                backgroundColor: '#101011',
+                color: '#999999',
+              }}
               key={item.id}
             >
               <CardHeader title={item.user} />
@@ -40,7 +52,11 @@ const Reviews = () => {
                 <Typography>{item.review}</Typography>
               </CardContent>
               <CardActions>
-                <Button variant="contained" onClick={() => setInput(item)}>
+                <Button
+                  variant="contained"
+                  onClick={() => setInput(item)}
+                  color="success"
+                >
                   Edit
                 </Button>
                 <Button
@@ -54,7 +70,9 @@ const Reviews = () => {
           ))}
         </Box>
       ) : (
-        <h3>Пока нет отзывов!</h3>
+        <Box sx={{ width: '50%', margin: '0 auto' }}>
+          <h3 style={{ textAlign: 'center' }}>Пока нет отзывов!</h3>
+        </Box>
       )}
     </Box>
   );
