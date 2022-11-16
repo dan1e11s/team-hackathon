@@ -1,80 +1,81 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { styled } from "@mui/material/styles";
-import MuiDrawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
-import { IconButton } from "@mui/material";
-import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
-import "../ProductSideBar/ProductSideBar.css";
-import { grey } from "@mui/material/colors";
-import FilterProduct from "../FilterProduct/FilterProduct";
-import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { styled } from '@mui/material/styles';
+import MuiDrawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import HomeIcon from '@mui/icons-material/Home';
+import { IconButton } from '@mui/material';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import '../ProductSideBar/ProductSideBar.css';
+import { grey } from '@mui/material/colors';
+import FilterProduct from '../FilterProduct/FilterProduct';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
-const drawerWidth = "220px";
+const drawerWidth = '220px';
 
-const openedMixin = theme => ({
-  color: "#999999",
-  backgroundColor: "#101011",
+const openedMixin = (theme) => ({
+  color: '#999999',
+  backgroundColor: '#101011',
   width: drawerWidth,
-  transition: theme.transitions.create("width", {
+  transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
-  overflowX: "hidden",
+  overflowX: 'hidden',
 });
 
-const closedMixin = theme => ({
-  backgroundColor: "#101011",
-  transition: theme.transitions.create("width", {
+const closedMixin = (theme) => ({
+  backgroundColor: '#101011',
+  transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  overflowX: "hidden",
+  overflowX: 'hidden',
   width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up('sm')]: {
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
 });
 
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
 }));
 
 const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: prop => prop !== "open",
+  shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
-  whiteSpace: "nowrap",
-  boxSizing: "border-box",
+  whiteSpace: 'nowrap',
+  boxSizing: 'border-box',
   ...(open && {
     ...openedMixin(theme),
-    "& .MuiDrawer-paper": openedMixin(theme),
+    '& .MuiDrawer-paper': openedMixin(theme),
   }),
   ...(!open && {
     ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme),
+    '& .MuiDrawer-paper': closedMixin(theme),
   }),
 }));
 
-const color = { color: "#999999" };
+const color = { color: '#999999' };
 
 export default function ProductSideBar() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState(false);
 
-  const username = JSON.parse(localStorage.getItem("user"));
+  const username = JSON.parse(localStorage.getItem('user'));
   useEffect(() => {
     username ? setUser(username.isAdmin) : setUser(false);
   }, []);
@@ -87,49 +88,54 @@ export default function ProductSideBar() {
       onMouseOut={() => setOpen(false)}
       variant="permanent"
       open={open}
-      className="sidebar">
+      className="sidebar"
+    >
       <DrawerHeader>
-        <IconButton onClick={() => navigate("/product")}>
-          <CatchingPokemonIcon sx={{ color: "white" }} />
+        <IconButton onClick={() => navigate('/product')}>
+          <CatchingPokemonIcon sx={{ color: 'white' }} />
         </IconButton>
       </DrawerHeader>
       <List>
-        <ListItem disablePadding sx={{ display: "block" }}>
+        <ListItem disablePadding sx={{ display: 'block' }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              justifyContent: open ? 'initial' : 'center',
               px: 2.5,
             }}
-            onClick={() => navigate("/product")}>
+            onClick={() => navigate('/product')}
+          >
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : "auto",
-                justifyContent: "center",
-              }}>
+                mr: open ? 3 : 'auto',
+                justifyContent: 'center',
+              }}
+            >
               <HomeIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>Home</ListItemText>
           </ListItemButton>
           <FilterProduct open={open} />
           <ListItemButton
-            onClick={() => navigate("/favorites")}
+            onClick={() => navigate('/favorities')}
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              justifyContent: open ? 'initial' : 'center',
               px: 2.5,
-            }}>
+            }}
+          >
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : "auto",
-                justifyContent: "center",
-              }}>
+                mr: open ? 3 : 'auto',
+                justifyContent: 'center',
+              }}
+            >
               <BookmarkIcon />
             </ListItemIcon>
             <ListItemText sx={{ opacity: open ? 1 : 0 }}>
@@ -137,51 +143,57 @@ export default function ProductSideBar() {
             </ListItemText>
           </ListItemButton>
           <ListItemButton
+            onClick={() => navigate('/reviews')}
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              justifyContent: open ? 'initial' : 'center',
               px: 2.5,
-            }}>
+            }}
+          >
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : "auto",
-                justifyContent: "center",
-              }}>
-              <AdminPanelSettingsIcon />
+                mr: open ? 3 : 'auto',
+                justifyContent: 'center',
+              }}
+            >
+              <ReviewsIcon />
             </ListItemIcon>
-            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Comments</ListItemText>
+            <ListItemText sx={{ opacity: open ? 1 : 0 }}>Reviews</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
       <Divider color={grey[600]} />
       <List>
-        <ListItem disablePadding sx={{ display: `${user ? "block" : "none"}` }}>
+        <ListItem disablePadding sx={{ display: `${user ? 'block' : 'none'}` }}>
           <ListItemButton
             className="list-item-btn"
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              justifyContent: open ? 'initial' : 'center',
               px: 2.5,
             }}
-            onClick={() => navigate("/admin")}>
+            onClick={() => navigate('/admin')}
+          >
             <ListItemIcon
               sx={{
                 color,
                 minWidth: 0,
-                mr: open ? 3 : "auto",
-                justifyContent: "center",
-                display: `${user ? "block" : "none"}`,
-              }}>
+                mr: open ? 3 : 'auto',
+                justifyContent: 'center',
+                display: `${user ? 'block' : 'none'}`,
+              }}
+            >
               <AdminPanelSettingsIcon />
             </ListItemIcon>
             <ListItemText
               sx={{
                 opacity: open ? 1 : 0,
-                display: `${user ? "block" : "none"}`,
-              }}>
+                display: `${user ? 'block' : 'none'}`,
+              }}
+            >
               Admin Panel
             </ListItemText>
           </ListItemButton>

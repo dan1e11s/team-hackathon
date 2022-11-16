@@ -47,11 +47,15 @@ const ProductCard = ({ item }) => {
       </CardContent>
       <CardActions sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Tooltip title="Details">
-          <IconButton onClick={() => navigate(`details/${item.id}`)}>
+          <IconButton onClick={() => navigate(`/details/${item.id}`)}>
             <ReadMoreIcon sx={{ color: '#999999' }} />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Add to cart">
+        <Tooltip
+          title={`${
+            checkProductInCart(item.id) ? 'Delete to cart' : 'Add to cart'
+          }`}
+        >
           <IconButton onClick={() => addProductToCart(item)}>
             <AddShoppingCartIcon
               sx={{
@@ -60,7 +64,11 @@ const ProductCard = ({ item }) => {
             />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Add to favorites">
+        <Tooltip
+          title={`${
+            checkFavorites(item.id) ? 'Delete to Favorites' : 'Add to Favorites'
+          }`}
+        >
           <IconButton onClick={() => addFavorites(item)}>
             <BookmarkAddIcon
               sx={{
