@@ -55,6 +55,20 @@
       "password": "klop",
       "isAdmin": false,
       "id": 8
+    },
+    {
+      "username": "makers",
+      "age": "22",
+      "password": "bootcamp",
+      "isAdmin": false,
+      "id": 9
+    },
+    {
+      "username": "hack",
+      "age": "30",
+      "password": "bob",
+      "isAdmin": false,
+      "id": 10
     }
   ],
   "products": [
