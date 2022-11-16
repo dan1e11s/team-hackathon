@@ -21,7 +21,7 @@ const Reviews = () => {
       sx={{
         width: '100%',
         minHeight: '100vh',
-        backgroundColor: '#999999',
+        backgroundColor: '#838383',
         paddingTop: '50px',
       }}
     >
