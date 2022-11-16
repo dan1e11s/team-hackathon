@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import '../../components/Favorites/Favorites.css';
@@ -18,16 +17,6 @@ const Favorites = () => {
   useEffect(() => {
     getFavorites();
   }, []);
-  //   console.log(
-  //     favorites.favorites.map((item) => {
-  //       return item.item.id;
-  //     })
-  //   );
-
-  function favoritesCleaner() {
-    localStorage.removeItem('favorites');
-    getFavorites();
-  }
 
   return (
     <div className="favoritepage">
@@ -82,7 +71,10 @@ const Favorites = () => {
                 >
                   Delete
                 </button>
-                <button className="button" onClick={favoritesCleaner}>
+                <button
+                  className="button"
+                  onClick={() => navigate(`/details/${elem.item.id}`)}
+                >
                   Learn More
                 </button>
               </CardActions>

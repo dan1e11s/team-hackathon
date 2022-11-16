@@ -37,13 +37,24 @@ const ReviewsContextProvider = ({ children }) => {
 
   const deleteReviews = async (item, id) => {
     const user = JSON.parse(localStorage.getItem('user'));
-    if (user.username === item.user) {
+    console.log(user.isAdmin);
+    if (user.isAdmin === true) {
       await axios.delete(`${REVIEWS_API}/${id}`);
       getReviews();
     } else {
-      alert('Вы не можете удалить этот отзыв!');
-      return;
+      if (user.username !== item.user) {
+        alert('Вы не можете удалить этот отзыв!');
+        return;
+      } else {
+        await axios.delete(`${REVIEWS_API}/${id}`);
+        getReviews();
+      }
     }
+  };
+
+  const saveChangesReviews = async (id, newReview) => {
+    await axios.patch(`${REVIEWS_API}/${id}`, newReview);
+    getReviews();
   };
 
   const values = {
@@ -52,6 +63,7 @@ const ReviewsContextProvider = ({ children }) => {
     getReviews,
     addReviews,
     deleteReviews,
+    saveChangesReviews,
   };
 
   return (

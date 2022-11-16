@@ -25,9 +25,17 @@ const AddReviews = () => {
   }
 
   return (
-    <Box>
-      <Box>
+    <Box sx={{ marginTop: '50px' }}>
+      <Box
+        sx={{
+          border: '1px solid red',
+          width: '500px',
+          margin: '0 auto',
+          padding: '20px',
+        }}
+      >
         <TextField
+          sx={{ width: '100%', color: 'red' }}
           id="standard-textarea"
           label="Multiline Placeholder"
           placeholder="Placeholder"
@@ -36,8 +44,11 @@ const AddReviews = () => {
           value={review}
           onChange={(e) => setReview(e.target.value)}
         />
+        <br />
+        <Button sx={{ width: '100%' }} onClick={createReviews}>
+          Add Review
+        </Button>
       </Box>
-      <Button onClick={createReviews}>Add Review</Button>
     </Box>
   );
 };

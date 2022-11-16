@@ -30,7 +30,7 @@ const MainRoutes = () => {
               <Route path="/edit/:id" element={<EditPage />} />
               <Route path="/register" element={<RegistrationPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/product/details/:id" element={<DetailsPage />} />
+              <Route path="/details/:id" element={<DetailsPage />} />
               <Route path="/add" element={<AddProductPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/payment" element={<PaymentPage />} />
